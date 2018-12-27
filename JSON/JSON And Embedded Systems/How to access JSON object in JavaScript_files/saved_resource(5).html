@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<!-- saved from url=(0426)https://disqus.com/embed/comments/?base=default&version=e4d6b825474d970581f8906da3f0481c&f=mkyong&t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&s_o=default&l= -->
+<html lang="en" dir="ltr" class="js no-touch localstorage sessionstorage contenteditable use-opacity-transitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Disqus Comments</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+        .alert--warning {
+            border-radius: 3px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #FFE070;
+            color: #A47703;
+        }
+
+        .alert--warning a,
+        .alert--warning a:hover,
+        .alert--warning strong {
+            color: #A47703;
+            font-weight: bold;
+        }
+
+        .alert--error p,
+        .alert--warning p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        </style>
+    
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        #error {
+            display: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        
+    </style>
+
+<link rel="preload" as="script" href="./lounge.bundle.e7a5ccb977d07f1cae173c640152e0be.js.download"><link rel="preload" as="script" href="./config.js.download"><link rel="stylesheet" href="./lounge.d97e83aebb672a1bbd0b476734a4149f.css"><script src="./cb=gapi.loaded_0" async=""></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lounge/main" src="./lounge.bundle.e7a5ccb977d07f1cae173c640152e0be.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="remote/config" src="./config.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ga" src="./ga.js.download"></script><style id="css_1485520719271"></style><!--<base target="_parent">--><base href="." target="_parent"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="fb" src="./sdk.js(1).download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="gapi" src="./api.js.download" gapi_processed="true"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body>
+    
+
+    
+    <div id="error" class="alert--error">
+        <p>We were unable to load Disqus. If you are a moderator please see our <a href="https://docs.disqus.com/help/83/"> troubleshooting guide</a>. </p>
+    </div>
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"audienceSyncVerified":false,"mustVerify":false,"canReply":true,"mustVerifyEmail":false},"features":{},"forum":{"raw_guidelines":null,"twitterName":"mkyong","guidelines":null,"favicon":{"permalink":"https://disqus.com/api/forums/favicons/mkyong.jpg","cache":"//a.disquscdn.com/uploads/forums/267/3082/favicon.png"},"id":"mkyong","createdAt":"2013-11-18T22:15:37.195846","category":"Tech","founder":"20319410","daysAlive":0,"installCompleted":true,"pk":"2673082","channel":null,"description":"","raw_description":"","permissions":{},"name":"Mkyong.com","language":"en","settings":{"supportLevel":3,"adsDRNativeEnabled":true,"colorScheme":"light","adsVideoEnabled":false,"allowAnonPost":true,"ssoRequired":false,"unapproveLinks":true,"linkAffiliationEnabled":false,"adsProductLinksThumbnailsEnabled":true,"adsProductStoriesEnabled":true,"organicDiscoveryEnabled":false,"disable3rdPartyTrackers":false,"adsProductDisplayEnabled":true,"discoveryMax":true,"adsProductLinksEnabled":true,"hasCustomAvatar":false,"moderatorText":"","adsEnabled":true,"adsPositionTopEnabled":true,"allowMedia":false,"adultContent":false,"promotedDiscoveryEnabled":true,"allowAnonVotes":false,"adsProductVideoEnabled":false,"mustVerify":true,"discoveryThumbnailsEnabled":true,"mustVerifyEmail":true,"audienceSyncEnabled":false,"typeface":"auto","adsPositionBottomEnabled":false,"mediaembedEnabled":false,"discoveryLocked":true,"validateAllPosts":false,"adsSettingsLocked":true,"isVIP":false,"adsPositionInthreadEnabled":true},"url":"http://www.mkyong.com","daysThreadAlive":0,"avatar":{"small":{"permalink":"https://disqus.com/api/forums/avatars/mkyong.jpg?size=32","cache":"//a.disquscdn.com/1485196591/images/noavatar32.png"},"large":{"permalink":"https://disqus.com/api/forums/avatars/mkyong.jpg?size=92","cache":"//a.disquscdn.com/1485196591/images/noavatar92.png"}},"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.mkyong.com&key=tfjcTQJM_Tbv03uCfOkz3A"}}</script>
+
+    
+    <script type="text/json" id="disqus-threadData">{"cursor":{"hasPrev":false,"prev":null,"total":8,"hasNext":false,"next":"1:0:0"},"code":0,"response":{"lastModified":1485062265,"posts":[{"dislikes":0,"numReports":0,"likes":3,"message":"\u003cp>This tool will help to analyse json data \u003ca href=\"http://disq.us/url?url=http%3A%2F%2Fcodebeautify.org%2Fjsonviewer%3ATd0_vE_dz3z74tKQ9KbA4LUuZA0&amp;cuid=2673082\" rel=\"nofollow noopener\">http://codebeautify.org/jsonvi...\u003c/a>\u003c/p>","id":"1569879112","isHighlighted":false,"author":{"username":"jamesmalvi","about":"I am awesome..","name":"James","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":0.6158859999999998,"profileUrl":"https://disqus.com/by/jamesmalvi/","url":"http://www.imgdj.com/","reputation":0.6158859999999998,"location":"","isPrivate":true,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.imgdj.com%2F&key=wXH34RAk3GKw2ZuBVzPN4A","isPrimary":true,"joinedAt":"2013-10-31T16:30:53","id":"79818730","reputationLabel":"Low 2","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/jamesmalvi.jpg","cache":"//a.disquscdn.com/uploads/users/7981/8730/avatar32.jpg?1482543979"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/jamesmalvi.jpg","cache":"//a.disquscdn.com/uploads/users/7981/8730/avatar92.jpg?1482543979","large":{"permalink":"https://disqus.com/api/users/avatars/jamesmalvi.jpg","cache":"//a.disquscdn.com/uploads/users/7981/8730/avatar92.jpg?1482543979"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2014-09-02T06:20:28","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"This tool will help to analyse json data http://codebeautify.org/jsonviewer","canVote":false,"thread":"1978021640","forum":"mkyong","depth":0,"points":3,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hi \u003cbr>How shall I parse this JSON\u003cbr>{\u003cbr>  \"channelList\": {\u003cbr>    \"channel1\": \"All channels local\",\u003cbr>    \"channe2\": \"CH1Local CH2Local CH3Local CH4Local CH5Remote\"\u003cbr>  }\u003cbr>}\u003c/p>\u003cp>Object from which JSON is being generated is\u003c/p>\u003cp>public class ChannelList implements Serializable {\u003cbr>    HashMap&lt;string, string=\"\"&gt; channelList;}\u003c/p>\u003cp>I am using angular2 to call restapi\u003cbr>getActiveChannel(): Observable&lt;ichannellist&gt; {\u003cbr>        return this._http.get(this._activeChannelUrl)\u003cbr>            .map((response: Response) =&gt;&lt;ichannellist&gt; response.json())\u003cbr>            .do(data =&gt; console.log(\"All: \" + JSON.stringify(data)))\u003cbr>            .catch(this.handleError);\u003cbr>    }\u003c/p>\u003cp>I need to parse JSON response in key value pair\u003c/p>\u003cp>Please note channel list-- contain hashmap of channel name and its description\u003cbr>so key value will differ on calls from one client to another client.\u003cbr>Keys will also not remain same as there are different channels.\u003c/p>\u003cp>Hashmap is prepared on fly with the client naming convention.\u003c/p>\u003cp>Appreciate your response.\u003c/p>","id":"3056510934","isHighlighted":false,"author":{"username":"jagruti_frank","about":"","name":"Jagruti Frank","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.23667,"profileUrl":"https://disqus.com/by/jagruti_frank/","url":"","reputation":1.23667,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2016-08-05T11:53:13","id":"217556268","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/jagruti_frank.jpg","cache":"//a.disquscdn.com/1485196591/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/jagruti_frank.jpg","cache":"//a.disquscdn.com/1485196591/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/jagruti_frank.jpg","cache":"//a.disquscdn.com/1485196591/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-12-17T13:38:44","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hi \nHow shall I parse this JSON\n{\n  \"channelList\": {\n    \"channel1\": \"All channels local\",\n    \"channe2\": \"CH1Local CH2Local CH3Local CH4Local CH5Remote\"\n  }\n}\n\n\nObject from which JSON is being generated is \n\npublic class ChannelList implements Serializable {\n    HashMap\u003cString, String> channelList;}\n\n\nI am using angular2 to call restapi\ngetActiveChannel(): Observable\u003cIChannelList> {\n        return this._http.get(this._activeChannelUrl)\n            .map((response: Response) =>\u003cIChannelList> response.json())\n            .do(data => console.log(\"All: \" + JSON.stringify(data)))\n            .catch(this.handleError);\n    }\n\nI need to parse JSON response in key value pair\n\nPlease note channel list-- contain hashmap of channel name and its description\nso key value will differ on calls from one client to another client.\nKeys will also not remain same as there are different channels.\n\nHashmap is prepared on fly with the client naming convention.\n\nAppreciate your response.","canVote":false,"thread":"1978021640","forum":"mkyong","depth":0,"points":0,"moderationLabels":[],"isEdited":true},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Helped me a lots to understand tnx.\u003c/p>","id":"2798667789","isHighlighted":false,"author":{"username":"batboldboldbayar","about":"IT engineer","name":"Batbold Boldbayar","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.240909,"profileUrl":"https://disqus.com/by/batboldboldbayar/","url":"","reputation":1.240909,"location":"Ulaanbaatar, MONGOLIA","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-07-21T12:13:41","id":"115216957","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/batboldboldbayar.jpg","cache":"//a.disquscdn.com/uploads/users/11521/6957/avatar32.jpg?1470203327"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/batboldboldbayar.jpg","cache":"//a.disquscdn.com/uploads/users/11521/6957/avatar92.jpg?1470203327","large":{"permalink":"https://disqus.com/api/users/avatars/batboldboldbayar.jpg","cache":"//a.disquscdn.com/uploads/users/11521/6957/avatar92.jpg?1470203327"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-07-23T05:49:25","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Helped me a lots to understand tnx.","canVote":false,"thread":"1978021640","forum":"mkyong","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>ur super bro.! thank you very much\u003c/p>","id":"2761655336","isHighlighted":false,"author":{"username":"disqus_s8o9GLocr3","about":"","name":"sudhakarphad","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2355429999999998,"profileUrl":"https://disqus.com/by/disqus_s8o9GLocr3/","url":"","reputation":1.2355429999999998,"location":"hyderabad","isPrivate":true,"signedUrl":"","isPrimary":true,"joinedAt":"2014-03-27T08:58:28","id":"100626631","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_s8o9GLocr3.jpg","cache":"//a.disquscdn.com/uploads/users/10062/6631/avatar32.jpg?1473489145"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_s8o9GLocr3.jpg","cache":"//a.disquscdn.com/uploads/users/10062/6631/avatar92.jpg?1473489145","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_s8o9GLocr3.jpg","cache":"//a.disquscdn.com/uploads/users/10062/6631/avatar92.jpg?1473489145"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-07-02T08:17:41","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"ur super bro.! thank you very much","canVote":false,"thread":"1978021640","forum":"mkyong","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Thx\u003c/p>","id":"2456555138","isHighlighted":false,"author":{"username":"achmadcahyaaditya","about":"","name":"Achmad Cahya Aditya","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.242943,"profileUrl":"https://disqus.com/by/achmadcahyaaditya/","url":"","reputation":1.242943,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2015-08-25T15:00:37","id":"171412197","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/achmadcahyaaditya.jpg","cache":"//a.disquscdn.com/uploads/users/17141/2197/avatar32.jpg?1475386771"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/achmadcahyaaditya.jpg","cache":"//a.disquscdn.com/uploads/users/17141/2197/avatar92.jpg?1475386771","large":{"permalink":"https://disqus.com/api/users/avatars/achmadcahyaaditya.jpg","cache":"//a.disquscdn.com/uploads/users/17141/2197/avatar92.jpg?1475386771"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-01-14T04:13:11","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Thx","canVote":false,"thread":"1978021640","forum":"mkyong","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>tanks\u003c/p>","id":"2023972181","isHighlighted":false,"author":{"username":"shihabmorayur","about":"","name":"Shihab Morayur","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.210886,"profileUrl":"https://disqus.com/by/shihabmorayur/","url":"","reputation":1.210886,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-06-26T13:23:17","id":"59162128","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/shihabmorayur.jpg","cache":"//a.disquscdn.com/uploads/users/5916/2128/avatar32.jpg?1446198110"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/shihabmorayur.jpg","cache":"//a.disquscdn.com/uploads/users/5916/2128/avatar92.jpg?1446198110","large":{"permalink":"https://disqus.com/api/users/avatars/shihabmorayur.jpg","cache":"//a.disquscdn.com/uploads/users/5916/2128/avatar92.jpg?1446198110"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-05-14T06:52:19","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"tanks","canVote":false,"thread":"1978021640","forum":"mkyong","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hi Mkyong\u003cbr>With all the respect for the previous tutorials, you'll be showing how to declare private variable in Java soon. And in the second part, how to declare protected variable. After three weeks, how to declare the public one.\u003c/p>\u003cp>cheers jotka\u003c/p>","id":"1129078887","isHighlighted":false,"author":{"name":"jotka","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1485196591/images/noavatar32.png","cache":"//a.disquscdn.com/1485196591/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1485196591/images/noavatar92.png","cache":"//a.disquscdn.com/1485196591/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1485196591/images/noavatar92.png","cache":"//a.disquscdn.com/1485196591/images/noavatar92.png"},"signedUrl":"","isAnonymous":true},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-10-12T20:43:55","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hi Mkyong\r\nWith all the respect for the previous tutorials, you'll be showing how to declare private variable in Java soon. And in the second part, how to declare protected variable. After three weeks, how to declare the public one.\r\n\r\ncheers jotka","canVote":false,"thread":"1978021640","forum":"mkyong","depth":0,"points":0,"moderationLabels":["anonymous"],"isEdited":false},{"dislikes":1,"numReports":0,"likes":0,"message":"\u003cp>{\u003c/p>\u003cp>\"_id\" : ObjectId(\"5625e76522a4e1a009ff8948\"),\u003c/p>\u003cp>\"name\" : \"Country 1\",\u003c/p>\u003cp>\"parentId\" : \"5625e76522a4e1a009ff8947\",\u003c/p>\u003cp>\"type\" : \"COUNTRY\",\u003c/p>\u003cp>\"order\" : 0,\u003c/p>\u003cp>\"createdDate\" : 1445324645373,\u003c/p>\u003cp>\"lastModifiedDate\" : 1445324645373,\u003c/p>\u003cp>\"ancestors\" : [\u003c/p>\u003cp>\"5625e76522a4e1a009ff8947\"\u003c/p>\u003cp>]\u003c/p>\u003cp>}\u003c/p>\u003cp>{\u003c/p>\u003cp>\"_id\" : ObjectId(\"5625e76522a4e1a009ff8949\"),\u003c/p>\u003cp>\"name\" : \"Site 1\",\u003c/p>\u003cp>\"parentId\" : \"5625e76522a4e1a009ff8948\",\u003c/p>\u003cp>\"type\" : \"SITE\",\u003c/p>\u003cp>\"order\" : 0,\u003c/p>\u003cp>\"createdDate\" : 1445324645401,\u003c/p>\u003cp>\"lastModifiedDate\" : 1445324645401,\u003c/p>\u003cp>\"ancestors\" : [\u003c/p>\u003cp>\"5625e76522a4e1a009ff8947\",\u003c/p>\u003cp>\"5625e76522a4e1a009ff8948\"\u003c/p>\u003cp>]\u003c/p>\u003cp>}\u003c/p>\u003cp>{\u003c/p>\u003cp>\"_id\" : ObjectId(\"5625e76522a4e1a009ff894a\"),\u003c/p>\u003cp>\"name\" : \"Building 1\",\u003c/p>\u003cp>\"parentId\" : \"5625e76522a4e1a009ff8949\",\u003c/p>\u003cp>\"type\" : \"BUILDING\",\u003c/p>\u003cp>\"order\" : 0,\u003c/p>\u003cp>\"createdDate\" : 1445324645426,\u003c/p>\u003cp>\"lastModifiedDate\" : 1445324645426,\u003c/p>\u003cp>\"ancestors\" : [\u003c/p>\u003cp>\"5625e76522a4e1a009ff8947\",\u003c/p>\u003cp>\"5625e76522a4e1a009ff8948\",\u003c/p>\u003cp>\"5625e76522a4e1a009ff8949\"\u003c/p>\u003cp>]\u003c/p>\u003cp>}\u003c/p>\u003cp>{\u003c/p>\u003cp>\"_id\" : ObjectId(\"5625e76522a4e1a009ff894b\"),\u003c/p>\u003cp>\"name\" : \"Floor 0\",\u003c/p>\u003cp>\"parentId\" : \"5625e76522a4e1a009ff894a\",\u003c/p>\u003cp>\"type\" : \"FLOOR\",\u003c/p>\u003cp>\"order\" : 0,\u003c/p>\u003cp>\"createdDate\" : 1445324645484,\u003c/p>\u003cp>\"lastModifiedDate\" : 1445324645484,\u003c/p>\u003cp>\"levelSpecificData\" : {\u003c/p>\u003cp>\"iconZoomFactor\" : 0.25,\u003c/p>\u003cp>\"labelZoomFactor\" : 1,\u003c/p>\u003cp>\"labelFont\" : \"arial\",\u003c/p>\u003cp>\"labelFontSize\" : 10\u003c/p>\u003cp>},\u003c/p>\u003cp>\"ancestors\" : [\u003c/p>\u003cp>\"5625e76522a4e1a009ff8947\",\u003c/p>\u003cp>\"5625e76522a4e1a009ff8948\",\u003c/p>\u003cp>\"5625e76522a4e1a009ff8949\",\u003c/p>\u003cp>\"5625e76522a4e1a009ff894a\"\u003c/p>\u003cp>]\u003c/p>\u003cp>}\u003c/p>\u003cp>{\u003c/p>\u003cp>\"_id\" : ObjectId(\"5625e78022a4e1a009ff894c\"),\u003c/p>\u003cp>\"name\" : \"Floor 1\",\u003c/p>\u003cp>\"parentId\" : \"5625e76522a4e1a009ff894a\",\u003c/p>\u003cp>\"order\" : 1,\u003c/p>\u003cp>\"type\" : \"FLOOR\",\u003c/p>\u003cp>\"createdDate\" : 1445324672901,\u003c/p>\u003cp>\"lastModifiedDate\" : 1445324695318,\u003c/p>\u003cp>\"levelSpecificData\" : {\u003c/p>\u003cp>\"iconZoomFactor\" : 0.25,\u003c/p>\u003cp>\"labelZoomFactor\" : 1,\u003c/p>\u003cp>\"labelFont\" : \"arial\",\u003c/p>\u003cp>\"labelFontSize\" : 24\u003c/p>\u003cp>},\u003c/p>\u003cp>\"ancestors\" : [\u003c/p>\u003cp>\"5625e76522a4e1a009ff8947\",\u003c/p>\u003cp>\"5625e76522a4e1a009ff8948\",\u003c/p>\u003cp>\"5625e76522a4e1a009ff8949\",\u003c/p>\u003cp>\"5625e76522a4e1a009ff894a\"\u003c/p>\u003cp>]\u003c/p>\u003cp>}\u003c/p>\u003cp>How can we deal with this type of json data???\u003c/p>","id":"2317272717","isHighlighted":false,"author":{"username":"disqus_SIwNRzJXQB","about":"","name":"Veeresh","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2324929999999998,"profileUrl":"https://disqus.com/by/disqus_SIwNRzJXQB/","url":"","reputation":1.2324929999999998,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2015-10-20T18:00:51","id":"179417927","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_SIwNRzJXQB.jpg","cache":"//a.disquscdn.com/1485196591/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/disqus_SIwNRzJXQB.jpg","cache":"//a.disquscdn.com/1485196591/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_SIwNRzJXQB.jpg","cache":"//a.disquscdn.com/1485196591/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-10-20T18:01:02","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"{\n\n\"_id\" : ObjectId(\"5625e76522a4e1a009ff8948\"),\n\n\"name\" : \"Country 1\",\n\n\"parentId\" : \"5625e76522a4e1a009ff8947\",\n\n\"type\" : \"COUNTRY\",\n\n\"order\" : 0,\n\n\"createdDate\" : 1445324645373,\n\n\"lastModifiedDate\" : 1445324645373,\n\n\"ancestors\" : [\n\n\"5625e76522a4e1a009ff8947\"\n\n]\n\n}\n\n{\n\n\"_id\" : ObjectId(\"5625e76522a4e1a009ff8949\"),\n\n\"name\" : \"Site 1\",\n\n\"parentId\" : \"5625e76522a4e1a009ff8948\",\n\n\"type\" : \"SITE\",\n\n\"order\" : 0,\n\n\"createdDate\" : 1445324645401,\n\n\"lastModifiedDate\" : 1445324645401,\n\n\"ancestors\" : [\n\n\"5625e76522a4e1a009ff8947\",\n\n\"5625e76522a4e1a009ff8948\"\n\n]\n\n}\n\n{\n\n\"_id\" : ObjectId(\"5625e76522a4e1a009ff894a\"),\n\n\"name\" : \"Building 1\",\n\n\"parentId\" : \"5625e76522a4e1a009ff8949\",\n\n\"type\" : \"BUILDING\",\n\n\"order\" : 0,\n\n\"createdDate\" : 1445324645426,\n\n\"lastModifiedDate\" : 1445324645426,\n\n\"ancestors\" : [\n\n\"5625e76522a4e1a009ff8947\",\n\n\"5625e76522a4e1a009ff8948\",\n\n\"5625e76522a4e1a009ff8949\"\n\n]\n\n}\n\n{\n\n\"_id\" : ObjectId(\"5625e76522a4e1a009ff894b\"),\n\n\"name\" : \"Floor 0\",\n\n\"parentId\" : \"5625e76522a4e1a009ff894a\",\n\n\"type\" : \"FLOOR\",\n\n\"order\" : 0,\n\n\"createdDate\" : 1445324645484,\n\n\"lastModifiedDate\" : 1445324645484,\n\n\"levelSpecificData\" : {\n\n\"iconZoomFactor\" : 0.25,\n\n\"labelZoomFactor\" : 1,\n\n\"labelFont\" : \"arial\",\n\n\"labelFontSize\" : 10\n\n},\n\n\"ancestors\" : [\n\n\"5625e76522a4e1a009ff8947\",\n\n\"5625e76522a4e1a009ff8948\",\n\n\"5625e76522a4e1a009ff8949\",\n\n\"5625e76522a4e1a009ff894a\"\n\n]\n\n}\n\n{\n\n\"_id\" : ObjectId(\"5625e78022a4e1a009ff894c\"),\n\n\"name\" : \"Floor 1\",\n\n\"parentId\" : \"5625e76522a4e1a009ff894a\",\n\n\"order\" : 1,\n\n\"type\" : \"FLOOR\",\n\n\"createdDate\" : 1445324672901,\n\n\"lastModifiedDate\" : 1445324695318,\n\n\"levelSpecificData\" : {\n\n\"iconZoomFactor\" : 0.25,\n\n\"labelZoomFactor\" : 1,\n\n\"labelFont\" : \"arial\",\n\n\"labelFontSize\" : 24\n\n},\n\n\"ancestors\" : [\n\n\"5625e76522a4e1a009ff8947\",\n\n\"5625e76522a4e1a009ff8948\",\n\n\"5625e76522a4e1a009ff8949\",\n\n\"5625e76522a4e1a009ff894a\"\n\n]\n\n}\n\nHow can we deal with this type of json data???","canVote":false,"thread":"1978021640","forum":"mkyong","depth":0,"points":-1,"moderationLabels":[],"isEdited":false}],"thread":{"feed":"https://mkyong.disqus.com/how_to_access_json_object_in_javascript/latest.rss","identifiers":["13097 http://www.mkyong.com/?p=13097"],"dislikes":0,"likes":1,"message":"","id":"1978021640","createdAt":"2013-11-19T03:20:31","category":"2714001","author":"20319410","isSpam":false,"signedLink":"http://disq.us/?url=http%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&key=XJySi5HI8CUSIbQ0d0A1KA","isDeleted":false,"hasStreaming":false,"raw_message":"","isClosed":false,"link":"http://www.mkyong.com/javascript/how-to-access-json-object-in-javascript/","slug":"how_to_access_json_object_in_javascript","forum":"mkyong","clean_title":"How to access JSON object in JavaScript","posts":8,"moderators":[20319410],"title":"How to access JSON object in JavaScript","highlightedPost":null}},"order":"popular"}</script>
+
+    
+
+    <div id="fixed-content"></div>
+
+
+    
+        
+<script type="text/json" id="disqus-urls">{
+    "root":"//disqus.com",
+    "next":"https://a.disquscdn.com/next/current/embed"
+}</script>
+
+        <script src="./lounge.load.e4d6b825474d970581f8906da3f0481c.js.download" id="bootstrap-script" data-app="lounge" crossorigin="anonymous" async=""></script>
+    
+
+
+<script src="./common.bundle.263d47ae7ed540c79ecbecffc299d01f.js.download"></script><iframe style="display: none;" src="./saved_resource(14).html"></iframe><div id="layout" data-tracking-area="layout">
+
+<div id="onboard" data-tracking-area="onboard"><div></div></div>
+
+<div id="highlighted-post" data-tracking-area="highlighted" class="highlighted-post" style="display: none;"></div>
+
+<div id="global-alert"></div>
+
+<header id="main-nav" data-tracking-area="main-nav">
+<nav class="nav nav-primary">
+<ul>
+<li class="nav-tab nav-tab--primary tab-conversation active" data-role="post-count"><a class="publisher-nav-color">
+<span class="comment-count">
+8 comments
+</span>
+
+<span class="comment-count-placeholder">
+Comments
+</span>
+</a>
+</li>
+<li class="nav-tab nav-tab--primary tab-community">
+<a href="https://disqus.com/home/forums/mkyong/" class="publisher-nav-color" data-action="community-sidebar" data-forum="mkyong" id="community-tab">
+<span class="community-name">
+<strong>Mkyong.com</strong>
+
+</span>
+
+<strong class="community-name-placeholder">Community</strong>
+</a>
+</li>
+<li class="nav-tab nav-tab--primary dropdown user-menu" data-role="logout"><a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="dropdown-toggle" data-toggle="dropdown">
+<span class="dropdown-toggle-wrapper">
+
+<span>
+Login
+</span>
+
+</span> <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+
+
+<li>
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="auth:disqus">Disqus</a>
+</li>
+<li>
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="auth:facebook">Facebook</a>
+</li>
+<li>
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="auth:twitter">Twitter</a>
+</li>
+<li>
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="auth:google">Google</a>
+</li>
+
+
+
+</ul>
+</li>
+<li class="nav-tab nav-tab--primary notification-menu unread" data-role="notification-menu"><a href="https://disqus.com/home/inbox/" class="notification-container" data-action="home" data-home-path="home/inbox/">
+<span class="notification-icon icon-comment" aria-hidden=""></span>
+<span class="notification-count" data-role="notification-count">1</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<section id="conversation" data-role="main" data-tracking-area="main">
+<div class="nav nav-secondary" data-tracking-area="secondary-nav">
+<ul>
+<li id="recommend-button" class="nav-tab nav-tab--secondary recommend dropdown">
+<div class="thread-likes"><a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="recommend" title="Recommend this discussion" class="dropdown-toggle ">
+<span class="icon-heart"></span>
+<span class="label label-default">Recommend</span>
+<span class="label label-recommended">Recommended</span>
+<span class="label label-count">1</span>
+</a>
+<ul class="dropdown-menu dropdown-menu--coachmark">
+<li>
+<h2 class="coachmark__heading">Discussion Recommended!</h2>
+<p class="coachmark__description">Recommending means this is a discussion worth sharing. It gets shared to your followers' Disqus feeds, and gives the creator kudos!</p>
+<a href="https://disqus.com/home/?utm_source=disqus_embed&amp;utm_content=recommend_btn" class="btn btn-primary coachmark__button" target="_blank">
+ Find More Discussions 
+</a>
+</li>
+</ul>
+</div></li>
+<li id="thread-share-menu" class="nav-tab nav-tab--secondary dropdown share-menu hidden-sm"><a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
+<span class="icon-export"></span>
+<span class="label">Share</span>
+</a>
+<ul class="share-menu dropdown-menu">
+<li>
+<div class="share-menu__label">Share this discussion on</div>
+<ul>
+<li class="twitter">
+<a data-action="share:twitter" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#">Twitter</a>
+</li>
+<li class="facebook">
+<a data-action="share:facebook" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#">Facebook</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-role="post-sort" class="nav-tab nav-tab--secondary dropdown sorting pull-right">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="dropdown-toggle" data-toggle="dropdown">
+Sort by Best
+
+
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu pull-right">
+<li class="selected">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="sort" data-sort="popular">Best<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="sort" data-sort="desc">Newest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="sort" data-sort="asc">Oldest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="posts">
+<div id="form" class="textarea-wrapper--top-level"><form class="reply">
+<div class="postbox">
+<div role="alert"></div>
+<div class="avatar">
+<span class="user">
+<img data-role="user-avatar" src="./noavatar92.7b2fde640943965cc88df0cdee365907.png" alt="Avatar">
+</span>
+</div>
+
+<div class="textarea-wrapper" data-role="textarea" dir="auto"><div><span class="placeholder">Join the discussion…</span><div class="textarea" tabindex="0" role="textbox" aria-multiline="true" contenteditable="PLAINTEXT-ONLY" data-role="editable" aria-label="Join the discussion…" style="overflow: auto; word-wrap: break-word; max-height: 350px;"><p><br></p></div><div style="display: none;"><ul class="user-mention__list">
+<li class="header user-mention__header">
+<h5>in this conversation</h5>
+</li>
+</ul>
+</div></div>
+<div data-role="drag-drop-placeholder" class="media-drag-hover" style="display: none">
+<div class="drag-text">
+⬇ Drag and drop your images here to upload them.
+</div>
+</div>
+<div class="edit-alert" role="postbox-alert"></div>
+<div class="post-actions">
+<ul class="wysiwyg">
+</ul>
+</div>
+</div>
+
+<div data-role="login-form"><div><section class="auth-section logged-out">
+<div class="connect">
+<h6>Log in with</h6>
+<ul data-role="login-menu" class="services login-buttons">
+
+<li class="auth-disqus">
+<button type="button" data-action="auth:disqus" title="Disqus" class="connect__button"><i class="icon-disqus"></i></button>
+</li>
+<li class="auth-facebook">
+<button type="button" data-action="auth:facebook" title="Facebook" class="connect__button"><i class="icon-facebook-circle"></i></button>
+</li>
+<li class="auth-twitter">
+<button type="button" data-action="auth:twitter" title="Twitter" class="connect__button"><i class="icon-twitter-circle"></i></button>
+</li>
+<li class="auth-google">
+<button type="button" data-action="auth:google" title="Google" class="connect__button"><i class="icon-google-plus-circle"></i></button>
+</li>
+</ul>
+</div>
+<div class="guest">
+<h6 class="guest-form-title">
+<span class="register-text"> or sign up with Disqus </span>
+<span class="guest-text"> or pick a name </span>
+</h6>
+
+<div class="help-tooltip__wrapper help-icon">
+<div id="rules" class="tooltip show help-tooltip">
+<h3 class="help-tooltip__heading">Disqus is a discussion network</h3>
+<ul class="help-tooltip__list">
+<li><span>Disqus never moderates or censors. The rules on this community are its own.</span></li>
+<li><span>Your email is safe with us. It's only used for moderation and optional notifications.</span></li>
+<li><span>Don't be a jerk or do anything illegal. Everything is easier that way.</span></li>
+</ul>
+<p class="clearfix"><a href="https://docs.disqus.com/kb/terms-and-policies/" class="btn btn-small help-tooltip__button" target="_blank">Read full terms and conditions</a></p>
+</div>
+</div>
+
+<p class="input-wrapper">
+<input dir="auto" type="text" placeholder="Name" name="display_name" id="view43_display_name" maxlength="30" class="input--text">
+</p>
+
+<div class="guest-details " data-role="guest-details">
+<p class="input-wrapper">
+<input dir="auto" type="email" placeholder="Email" name="email" id="view43_email" class="input--text">
+</p>
+
+<p class="input-wrapper">
+<input dir="auto" type="password" class="register-text input--text" placeholder="Password" name="password" id="view43_password">
+</p>
+
+<div class="acceptance-wrapper register-text">
+By signing up, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+<div class="acceptance-wrapper guest-text">
+By posting, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+
+<div class="guest-checkbox">
+<label>
+<input type="checkbox" name="author-guest">
+I'd rather post as a guest
+</label>
+</div>
+
+<div class="proceed" data-role="submit-btn-container">
+<button type="submit" class="proceed__button btn submit" aria-label="Post"><span class="icon-proceed"></span><div class="spinner"></div></button>
+<button type="submit" class="proceed__button btn next" aria-label="Next"><span class="icon-proceed"></span><div class="spinner"></div></button>
+</div>
+</div>
+</div>
+</section>
+
+</div></div>
+</div>
+</form></div>
+
+<button class="alert alert--realtime" style="display: none" data-role="realtime-notification">
+</button>
+
+<div id="no-posts" style="display:none"></div>
+
+<ul id="post-list" class="post-list"><li class="post" id="post-1569879112"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/jamesmalvi/" class="user" data-action="profile" data-username="jamesmalvi">
+<img data-role="user-avatar" data-user="79818730" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/jamesmalvi/" data-action="profile" data-username="jamesmalvi" data-role="username">James</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://www.mkyong.com/javascript/how-to-access-json-object-in-javascript/#comment-1569879112" data-role="relative-time" class="time-ago" title="Tuesday, September 2, 2014 11:50 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>This tool will help to analyse json data <a href="http://disq.us/url?url=http%3A%2F%2Fcodebeautify.org%2Fjsonviewer%3ATd0_vE_dz3z74tKQ9KbA4LUuZA0&amp;cuid=2673082" rel="nofollow noopener">http://codebeautify.org/jsonvi...</a></p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="vote-up  count-3" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">3</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/pynyh4" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1569879112">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-3056510934"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/jagruti_frank/" class="user" data-action="profile" data-username="jagruti_frank">
+<img data-role="user-avatar" data-user="217556268" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/jagruti_frank/" data-action="profile" data-username="jagruti_frank" data-role="username">Jagruti Frank</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://www.mkyong.com/javascript/how-to-access-json-object-in-javascript/#comment-3056510934" data-role="relative-time" class="time-ago" title="Saturday, December 17, 2016 7:08 PM">a month ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container" style="height: 374px;">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Hi <br>How shall I parse this JSON<br>{<br>  "channelList": {<br>    "channel1": "All channels local",<br>    "channe2": "CH1Local CH2Local CH3Local CH4Local CH5Remote"<br>  }<br>}</p><p>Object from which JSON is being generated is</p><p>public class ChannelList implements Serializable {<br>    HashMap&lt;string, string=""&gt; channelList;}</p><p>I am using angular2 to call restapi<br>getActiveChannel(): Observable&lt;ichannellist&gt; {<br>        return this._http.get(this._activeChannelUrl)<br>            .map((response: Response) =&gt;&lt;ichannellist&gt; response.json())<br>            .do(data =&gt; console.log("All: " + JSON.stringify(data)))<br>            .catch(this.handleError);<br>    }</p><p>I need to parse JSON response in key value pair</p><p>Please note channel list-- contain hashmap of channel name and its description<br>so key value will differ on calls from one client to another client.<br>Keys will also not remain same as there are different channels.</p><p>Hashmap is prepared on fly with the client naming convention.</p><p>Appreciate your response.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1ejrmxi" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:3056510934">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-2798667789"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/batboldboldbayar/" class="user" data-action="profile" data-username="batboldboldbayar">
+<img data-role="user-avatar" data-user="115216957" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/batboldboldbayar/" data-action="profile" data-username="batboldboldbayar" data-role="username">Batbold Boldbayar</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://www.mkyong.com/javascript/how-to-access-json-object-in-javascript/#comment-2798667789" data-role="relative-time" class="time-ago" title="Saturday, July 23, 2016 11:19 AM">6 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Helped me a lots to understand tnx.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1aa95vx" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2798667789">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post advertisement">
+<div class="post-content" data-role="post-content">
+<div class="advertisement-comment">
+Comments continue after advertisement
+</div>
+<iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./saved_resource(15).html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 0px !important;"></iframe></div>
+</li><li class="post" id="post-2761655336"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_s8o9GLocr3/" class="user" data-action="profile" data-username="disqus_s8o9GLocr3">
+<img data-role="user-avatar" data-user="100626631" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_s8o9GLocr3/" data-action="profile" data-username="disqus_s8o9GLocr3" data-role="username">sudhakarphad</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://www.mkyong.com/javascript/how-to-access-json-object-in-javascript/#comment-2761655336" data-role="relative-time" class="time-ago" title="Saturday, July 2, 2016 1:47 PM">7 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>ur super bro.! thank you very much</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/19o7uw8" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2761655336">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-2456555138"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/achmadcahyaaditya/" class="user" data-action="profile" data-username="achmadcahyaaditya">
+<img data-role="user-avatar" data-user="171412197" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/achmadcahyaaditya/" data-action="profile" data-username="achmadcahyaaditya" data-role="username">Achmad Cahya Aditya</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://www.mkyong.com/javascript/how-to-access-json-object-in-javascript/#comment-2456555138" data-role="relative-time" class="time-ago" title="Thursday, January 14, 2016 9:43 AM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Thx</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/14mki2q" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2456555138">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-2023972181"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/shihabmorayur/" class="user" data-action="profile" data-username="shihabmorayur">
+<img data-role="user-avatar" data-user="59162128" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/shihabmorayur/" data-action="profile" data-username="shihabmorayur" data-role="username">Shihab Morayur</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://www.mkyong.com/javascript/how-to-access-json-object-in-javascript/#comment-2023972181" data-role="relative-time" class="time-ago" title="Thursday, May 14, 2015 12:22 PM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>tanks</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/xh0qxh" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2023972181">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-1129078887"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar">
+<div class="user"><img src="./noavatar92.png" class="user" alt="Avatar"></div>
+</div>
+
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author">jotka</span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://www.mkyong.com/javascript/how-to-access-json-object-in-javascript/#comment-1129078887" data-role="relative-time" class="time-ago" title="Sunday, October 13, 2013 2:13 AM">3 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Hi Mkyong<br>With all the respect for the previous tutorials, you'll be showing how to declare private variable in Java soon. And in the second part, how to declare protected variable. After three weeks, how to declare the public one.</p><p>cheers jotka</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/io82uf" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1129078887">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-2317272717"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_SIwNRzJXQB/" class="user" data-action="profile" data-username="disqus_SIwNRzJXQB">
+<img data-role="user-avatar" data-user="179417927" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_SIwNRzJXQB/" data-action="profile" data-username="disqus_SIwNRzJXQB" data-role="username">Veeresh</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://www.mkyong.com/javascript/how-to-access-json-object-in-javascript/#comment-2317272717" data-role="relative-time" class="time-ago" title="Tuesday, October 20, 2015 11:31 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container" style="height: 374px;">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>{</p><p>"_id" : ObjectId("5625e76522a4e1a009ff8948"),</p><p>"name" : "Country 1",</p><p>"parentId" : "5625e76522a4e1a009ff8947",</p><p>"type" : "COUNTRY",</p><p>"order" : 0,</p><p>"createdDate" : 1445324645373,</p><p>"lastModifiedDate" : 1445324645373,</p><p>"ancestors" : [</p><p>"5625e76522a4e1a009ff8947"</p><p>]</p><p>}</p><p>{</p><p>"_id" : ObjectId("5625e76522a4e1a009ff8949"),</p><p>"name" : "Site 1",</p><p>"parentId" : "5625e76522a4e1a009ff8948",</p><p>"type" : "SITE",</p><p>"order" : 0,</p><p>"createdDate" : 1445324645401,</p><p>"lastModifiedDate" : 1445324645401,</p><p>"ancestors" : [</p><p>"5625e76522a4e1a009ff8947",</p><p>"5625e76522a4e1a009ff8948"</p><p>]</p><p>}</p><p>{</p><p>"_id" : ObjectId("5625e76522a4e1a009ff894a"),</p><p>"name" : "Building 1",</p><p>"parentId" : "5625e76522a4e1a009ff8949",</p><p>"type" : "BUILDING",</p><p>"order" : 0,</p><p>"createdDate" : 1445324645426,</p><p>"lastModifiedDate" : 1445324645426,</p><p>"ancestors" : [</p><p>"5625e76522a4e1a009ff8947",</p><p>"5625e76522a4e1a009ff8948",</p><p>"5625e76522a4e1a009ff8949"</p><p>]</p><p>}</p><p>{</p><p>"_id" : ObjectId("5625e76522a4e1a009ff894b"),</p><p>"name" : "Floor 0",</p><p>"parentId" : "5625e76522a4e1a009ff894a",</p><p>"type" : "FLOOR",</p><p>"order" : 0,</p><p>"createdDate" : 1445324645484,</p><p>"lastModifiedDate" : 1445324645484,</p><p>"levelSpecificData" : {</p><p>"iconZoomFactor" : 0.25,</p><p>"labelZoomFactor" : 1,</p><p>"labelFont" : "arial",</p><p>"labelFontSize" : 10</p><p>},</p><p>"ancestors" : [</p><p>"5625e76522a4e1a009ff8947",</p><p>"5625e76522a4e1a009ff8948",</p><p>"5625e76522a4e1a009ff8949",</p><p>"5625e76522a4e1a009ff894a"</p><p>]</p><p>}</p><p>{</p><p>"_id" : ObjectId("5625e78022a4e1a009ff894c"),</p><p>"name" : "Floor 1",</p><p>"parentId" : "5625e76522a4e1a009ff894a",</p><p>"order" : 1,</p><p>"type" : "FLOOR",</p><p>"createdDate" : 1445324672901,</p><p>"lastModifiedDate" : 1445324695318,</p><p>"levelSpecificData" : {</p><p>"iconZoomFactor" : 0.25,</p><p>"labelZoomFactor" : 1,</p><p>"labelFont" : "arial",</p><p>"labelFontSize" : 24</p><p>},</p><p>"ancestors" : [</p><p>"5625e76522a4e1a009ff8947",</p><p>"5625e76522a4e1a009ff8948",</p><p>"5625e76522a4e1a009ff8949",</p><p>"5625e76522a4e1a009ff894a"</p><p>]</p><p>}</p><p>How can we deal with this type of json data???</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-1" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/12bn72l" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2317272717">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+<div class="load-more" data-role="more" style="display:none">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" data-action="more-posts" class="btn load-more__button">Load more comments</a>
+</div>
+</div>
+
+</section>
+
+<div id="placement-bottom" data-tracking-area="discovery-south"></div>
+
+<div id="footer" data-tracking-area="footer" class="disqus-footer__wrapper">
+<ul class="disqus-footer">
+<li class="disqus-footer__logo"><a href="https://disqus.com/" rel="nofollow" title="Powered by Disqus" class="disqus-footer__link">Powered by Disqus</a></li>
+<li id="thread-subscribe-button" class="email disqus-footer__item"> 
+<div class="default">
+<a href="https://disqus.com/embed/comments/?base=default&amp;version=e4d6b825474d970581f8906da3f0481c&amp;f=mkyong&amp;t_i=13097%20http%3A%2F%2Fwww.mkyong.com%2F%3Fp%3D13097&amp;t_u=https%3A%2F%2Fwww.mkyong.com%2Fjavascript%2Fhow-to-access-json-object-in-javascript%2F&amp;t_e=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_d=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;t_t=How%20to%20access%20JSON%20object%20in%20JavaScript&amp;s_o=default&amp;l=#" rel="nofollow" data-action="subscribe" title="Subscribe and get email updates from this discussion" class="disqus-footer__link"><i aria-hidden="true" class="icon icon-mail"></i><span class="clip">Subscribe</span> <i aria-hidden="true" class="icon icon-checkmark"></i></a>
+</div>
+<div class="form">
+<div class="input-wrapper"><input id="thread-subscribe-email" type="email" placeholder="yourname@email.com" class="disqus-footer__input input--text"></div>
+</div>
+</li>
+<li class="install disqus-footer__item">
+<a href="https://publishers.disqus.com/engage?utm_source=mkyong&amp;utm_medium=Disqus-Footer" rel="nofollow" target="_blank" class="disqus-footer__link">
+<i aria-hidden="true" class="icon icon-disqus"></i>
+<span class="clip hidden-sm">Add Disqus to your site</span>
+<span class="clip visible-sm hidden-xs">Add Disqus</span>
+<span class="clip visible-xs">Add</span>
+</a>
+</li>
+<li class="privacy disqus-footer__item">
+<a href="https://help.disqus.com/customer/portal/articles/1657951?utm_source=disqus&amp;utm_medium=embed-footer&amp;utm_content=privacy-btn" rel="nofollow" target="_blank" class="disqus-footer__link">
+<i aria-hidden="true" class="icon icon-lock"></i>
+<span class="clip">Privacy</span>
+</a>
+</li>
+</ul>
+</div>
+</div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Sh-3BhStODe(1).html" style="border: none;"></iframe></div></div></div><iframe style="position: absolute; width: 1px; height: 1px; left: -9999px;" id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" src="./iframe.html"></iframe><img src="./23096" style="display: none;"><img src="./saved_resource(1)" style="display: none;"><img src="./tpid=c38ah5r619gmtc7" style="display: none;"><iframe src="./sync.html" style="display: none;"></iframe></body></html>

@@ -1,0 +1,18 @@
+function nav_dropdown() {
+	$('ul.sub-menu').parent().hover(function(){
+		$(this).children('ul.sub-menu').fadeToggle(150);
+	});
+}
+
+$('ul.issue li:first-child a').bind('click', function(){
+	var x = 3;
+	$('ul.topics > li').each(function(){
+		$(this).toggle().css({'top' : x});
+		x = x + 42;
+	});
+	$('body').toggleClass('mobile-nav');
+});
+
+$(document).ready(function() {
+	nav_dropdown();
+});

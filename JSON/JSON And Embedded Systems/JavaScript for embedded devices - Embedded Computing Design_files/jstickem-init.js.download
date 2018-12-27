@@ -1,0 +1,237 @@
+var cat = (function clearAsideTerms() {
+		//alert("1");
+		//$('#stream-column #current-topic a').remove();
+		//$('#stream-column #current-topic ul li').remove();
+		//$('.aside .terms img').remove();
+	});
+	
+var stream_column_ad_slot_loaded = 0;	
+var STREAM_COLUMN_TIMED_OUT = true;
+var steam_column_timeout_interval;
+var stream_column_animation_speed = 2200;
+var content_types = { 
+	'/news/':{match_type:'url', name:'News', name_singular:'News Headline'}, 
+	'/articles/':{match_type:'url', name:'Articles', name_singular:'Article'},
+	'/video':{match_type:'prefix_singular', name:'Videos', name_singular:'Video'},
+	'/white-papers/':{match_type:'prefix_singular', name:'White Papers', name_singular:'White Paper'}
+};
+var found_content_types = [];
+var max_items = 4;
+var NOT_YET_SCROLLED = true;
+var handler_parent;
+var CURRENT_TRACKID;
+
+function steam_column_timeout() { 
+	STREAM_COLUMN_TIMED_OUT = false;
+	$(handler_parent).removeClass('timed_out');
+}
+
+var lastScrollTop = 0;
+/*
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+      stream_column_animation_speed = 1700;
+   } else {
+      stream_column_animation_speed = 590;
+   }
+   lastScrollTop = st;
+   if(NOT_YET_SCROLLED) {
+  	 STREAM_COLUMN_TIMED_OUT = false;
+  	 NOT_YET_SCROLLED = false;
+  }
+});
+*/
+
+function fire_steam_column_timeout_interval() {
+	steam_column_timeout_interval = setInterval('steam_column_timeout()', (((1.61803398875*1000)+stream_column_animation_speed)*3.14159265359));
+} 
+	
+$(document).ready(function() {
+	$(handler_parent).addClass('timed_out');
+	fire_steam_column_timeout_interval();
+	
+	//$('body').append($("<div class='popup hiding' id='article-finished'>You have finished reading the article.  Instead of this popup we could track a custom analytics event or show links to related articles the user may be interested in reading. (<a href='http://www.nytimes.com/2011/02/16/technology/16dell.html?ref=technology' target='_blank'>New York Times Online articles</a> do this.)</div>"));
+	
+	
+	
+	function recordAdEvent(trackid) {
+		if(!STREAM_COLUMN_TIMED_OUT && trackid!=CURRENT_TRACKID) {
+			CURRENT_TRACKID = trackid;
+			clearInterval(steam_column_timeout_interval);
+			STREAM_COLUMN_TIMED_OUT = true;
+			$(handler_parent).addClass('timed_out');
+			var 
+				el = ($("a[data-analyticsid='"+trackid+"']"));
+				//popup = $("<div class='popup'>This ad came into your viewport.  Instead of a popup we would track a custom analytics event with this ad&rsquo;s ID: "+trackid+".  Beats using pageviews to track ad views.</div>"),
+				//close = $("<a href='#' class='close'>X</a>");
+			if(typeof el == 'object') {	
+				el.addClass('loading');
+				el.addClass('active');
+				//popup.append(close);
+				cat();
+				//$('#stream-column #current-topic p.abstract').slideUp();
+				//$('#stream-column #current-topic h3').html(el.clone().removeAttr('data-analyticsid'));
+				//$('.aside .terms').append('<img src="'+trackid+'.gif" vspace="10">');
+				if(typeof trackid == 'string') {
+					
+					setTimeout(function(){ fetch_aside_content(trackid, el); }, 1900);
+				}
+				//$('.aside .terms').append($.waypoints('below'));
+				/*popup.css('width', el.outerWidth() - 10);
+				popup.css({
+					'top': el.offset().top - popup.outerHeight(),
+					'left': el.offset().left
+				});
+				close.click(function(event) {
+					$(this).parent().remove();
+					el.removeClass('active');
+					event.preventDefault();
+				});
+				*/
+			}
+		}
+	}
+	// only fire on WordPress tags
+		$('a[data-analyticsid]').filter(function(){ if($(this).attr('href').match('/topics/')) { return this; }}).waypoint(function() {
+		
+		
+			recordAdEvent($(this).data('analyticsid'));
+		
+	}, {
+		triggerOnce: false,
+		//offset: 'bottom-in-view',
+		continuous: false,
+		offset: "95%"
+	});
+	
+	//$('#lcol').waypoint(function(direction) {
+	//	$('#article-finished').toggleClass('hiding', direction === "up");
+	//}, {
+	//	offset: function() {
+	//		return $.waypoints('viewportHeight') - $(this).height() + 100;
+	//	}
+	//});
+});
+
+function ArrNoDupe(a) {
+    var temp = {};
+    for (var i = 0; i < a.length; i++)
+        temp[a[i]] = true;
+    var r = [];
+    for (var k in temp)
+        r.push(k);
+    return r;
+}
+
+$(document).ready(function() {
+	$('.story').stickem({onStick:cat});
+});
+		
+var easydate_options = {
+	units: [ 
+	    { name: "now", limit: 10000 }, 
+	    { name: "second", limit: 60, in_seconds: 1 }, 
+	    { name: "minute", limit: 3600, in_seconds: 60 }, 
+	    { name: "hour", limit: 86400, in_seconds: 3600  }, 
+	    { name: "yesterday", limit: 172800, past_only: true }, 
+	    { name: "tomorrow", limit: 172800, future_only: true }, 
+	    { name: "day", limit: 604800, in_seconds: 86400 }, 
+	    { name: "week", limit: 2629743, in_seconds: 604800  }, 
+	    { name: "month", limit: 31556926, in_seconds: 2629743 }, 
+	    { name: "year", limit: Infinity, in_seconds: 31556926 } 
+	]
+};
+$.easydate.locales.enUS.now = "today";
+
+function fetch_aside_content(topic, el) { 
+	
+	// defined in article-scroll.js in theme
+	
+	
+	var link = el.clone().removeAttr('data-analyticsid');
+	handler_parent = '#stream-column';
+	handler = handler_parent + ' #current-topic ul';
+	$(handler).slideUp(stream_column_animation_speed-300);
+	$(handler_parent).fadeOut(stream_column_animation_speed-300, function() { 
+		jQuery.ajax(
+			{
+				url:'/topics/'+escape(topic.replace("-", " "))+'/?post_type%5B0%5D=articles&post_type%5B1%5D=news&post_type%5B2%5D=guest-blogs', 
+				jsonp: 'callback',
+				jsonpCallback: 'rss',
+				dataType: 'jsonp',
+				data: {
+					jsonp: 'rss',
+					feed: 'json',
+				},
+				complete:fire_steam_column_timeout_interval(),
+				success: function(results)
+				{
+					$(handler + ' li').remove();
+					found_content_types = [];
+					results = results.slice(0,max_items);
+					if(results.length > 0) {
+						$.each(results, function(index, item) {
+							contentTypeClass = '';
+							$.each(content_types, function(_index, _props) { 
+								 if(_props.match_type == 'prefix_singular' && item.title.toLowerCase().indexOf(_props.name_singular.toLowerCase()+":")>-1) {
+									found_content_types.push(_props.name);
+									contentTypeClass = _props.name_singular;
+									return;
+								} else if(_props.match_type == 'url' && item.permalink.indexOf(_index)>-1) {
+									found_content_types.push(_props.name);
+									contentTypeClass = _props.name_singular;
+									return;
+								} 
+							});
+							$(handler).append('<li class="news-item '+dirify(contentTypeClass, "-")+'"><a href="'+item.permalink+'">'+item.title+'</a><span class="time_delim">&nbsp;&mdash;&nbsp;</span><time>'+item.date+'</time></li>');
+						});
+					} else {
+						$(handler).append('<li>No news found.</li>');
+					}
+					$(handler).attr('id', 'js-news');
+					$(handler).addClass('js-hidden');
+					var h3_text = '';
+					found_content_types = ArrNoDupe(found_content_types);
+					switch(found_content_types.length) 
+					{
+						case 0: 	break;
+						case 1: h3_text = found_content_types.pop(); break;
+						case 2: h3_text = found_content_types.pop() + ' &amp; ' + found_content_types.pop(); break;
+						default: h3_text = "&amp; " + found_content_types.pop();
+							do 
+							{
+								h3_text = found_content_types.pop() + ", " + h3_text;
+							} while(found_content_types.length > 0); 
+							break;
+					}
+					
+					$(handler_parent + ' h3').html(h3_text);
+					if(stream_column_ad_slot_loaded === 0) {
+						$(handler_parent + ' h3').after('<h4></h4>');
+					}
+					$(handler_parent + ' h4').html(link);
+					$(handler + " time").easydate(easydate_options); 
+					$(handler_parent).fadeIn(stream_column_animation_speed);
+					display_square_ad(true);
+					$('div.square').slideDown();
+					// wil never be shown again, so remove it; we don't want it hidden and refreshing ads silently
+					$('div.half-page').remove();
+					$(handler).slideDown(stream_column_animation_speed, function(){ 
+						el.removeClass('loading').addClass('finished');
+						setTimeout(function(){ el.removeClass('finished'); }, 380);
+					});
+					if(stream_column_ad_slot_loaded>0) {
+			    		googletag.pubads().setTargeting("Keywords", [topic]);
+			    		googletag.pubads().refresh(_ads);
+			    	}
+			    	stream_column_ad_slot_loaded++;
+			    }
+			}
+		);
+	}
+	);
+	//$(handler_parent + ' h3 a').slideUp(1900);
+	
+	
+}		

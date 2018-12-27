@@ -1,0 +1,4 @@
+document.write("<div id='[ID]'></div>\n");
+ADM_PL = {wId:3062041, pId:94675583, rank:1,width:300, height:300,clk:'[External click-tracking goes here (NOT URL-encoded)]'};window._Admeta=window._Admeta||{};(function(){ADM_PL.tagId='[ID]';window._Admeta.aTags=window._Admeta.aTags||[];window._Admeta.aTags.push(ADM_PL);if(window.Admeta&&window.Admeta.processAsync) window.Admeta.processAsync();else if(window._Admeta.aTags.length==1){var ajs=document.createElement("script");ajs.async=true;ajs.type="text/javascript";ajs.src="//s.atemda.com/Admeta.js";var node=document.getElementsByTagName("script")[0];node.parentNode.insertBefore(ajs, node);}})();
+
+

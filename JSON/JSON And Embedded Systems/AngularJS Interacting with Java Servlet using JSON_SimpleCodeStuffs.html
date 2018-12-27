@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0083)http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div class="fit-vids-style">­<style>               .fluid-width-video-wrapper {                 width: 100%;                              position: relative;                       padding: 0;                            }                                                                                   .fluid-width-video-wrapper iframe,        .fluid-width-video-wrapper object,        .fluid-width-video-wrapper embed {           position: absolute;                       top: 0;                                   left: 0;                                  width: 100%;                              height: 100%;                          }                                       </style></div><script async="" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/saved_resource"></script><script type="text/javascript" async="" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/plusone.js.download" gapi_processed="true"></script><script src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/cb=gapi.loaded_1" async=""></script><script src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/plusone.js.download" gapi_processed="true"></script><script id="facebook-jssdk" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/sdk.js.download"></script><script type="text/javascript" async="" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/ga.js.download"></script><script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/jquery.min.js.download"></script>
+
+
+<title>AngularJS Interacting with Java Servlet using JSON|SimpleCodeStuffs</title>
+<link rel="canonical" href="http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/">
+<meta name="google-site-verification" content="WtjeBWa6_DawL42cPChQYJt6RnpClulti4HCrSdbLmM">
+<link rel="stylesheet" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/colorpicker.css" type="text/css" media="screen">
+
+<link href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/css" rel="stylesheet" type="text/css">
+<link href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/css(1)" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="SimpleCodeStuffs RSS Feed" href="http://www.simplecodestuffs.com/feed/">
+<link rel="alternate" type="application/atom+xml" title="SimpleCodeStuffs Atom Feed" href="http://www.simplecodestuffs.com/feed/atom/">
+<link rel="pingback" href="http://www.simplecodestuffs.com/xmlrpc.php">
+
+<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" href="http://www.simplecodestuffs.com/wp-content/themes/Aggregate/css/ie6style.css" />
+	<script type="text/javascript" src="http://www.simplecodestuffs.com/wp-content/themes/Aggregate/js/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script type="text/javascript">DD_belatedPNG.fix('img#logo, span.overlay, a.zoom-icon, a.more-icon, #menu, #menu-right, #menu-content, ul#top-menu ul, #menu-bar, .footer-widget ul li, span.post-overlay, #content-area, .avatar-overlay, .comment-arrow, .testimonials-item-bottom, #quote, #bottom-shadow, #quote .container');</script>
+<![endif]-->
+<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="http://www.simplecodestuffs.com/wp-content/themes/Aggregate/css/ie7style.css" />
+<![endif]-->
+<!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" href="http://www.simplecodestuffs.com/wp-content/themes/Aggregate/css/ie8style.css" />
+<![endif]-->
+
+<script type="text/javascript">
+	document.documentElement.className = 'js';
+</script>
+
+
+<!-- BEGIN Metadata added by Add-Meta-Tags WordPress plugin -->
+<meta name="robots" content="NOODP,NOYDIR">
+<meta name="description" content="AngularJS Interacting with Java Servlet using JSON">
+<meta name="keywords" content="Android, Android Tutorials, Complete Android Tutorial, Soapui,soapui Tutorials, Complete soapui Tutorial, Sharepoint 2010.Sharepoint 2010 tutorials,complete Sharepoint 2010 tutorial, struts 2, struts 2 tutorials, complete struts 2 tutorials,spring, spring tutorials, complete spring tutorial, angularjs interacting with java servlet using json">
+<meta property="og:site_name" content="SimpleCodeStuffs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AngularJS Interacting with Java Servlet using JSON">
+<meta property="og:url" content="http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/">
+<meta property="og:description" content="AngularJS Interacting with Java Servlet using JSON">
+<meta property="og:locale" content="en_US">
+<meta property="og:updated_time" content="2015-05-02T07:05:44+00:00">
+<meta property="og:image" content="http://i1.wp.com/www.simplecodestuffs.com/wp-content/uploads/2015/04/Angular2.png?resize=550%2C278">
+<meta property="og:image:width" content="">
+<meta property="og:image:height" content="">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image" content="http://i1.wp.com/www.simplecodestuffs.com/wp-content/uploads/2015/04/AngularJS-demo.png?resize=380%2C146">
+<meta property="og:image:width" content="">
+<meta property="og:image:height" content="">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image" content="http://i1.wp.com/www.simplecodestuffs.com/wp-content/uploads/2015/04/AngularJS-demo1.png?resize=374%2C139">
+<meta property="og:image:width" content="">
+<meta property="og:image:height" content="">
+<meta property="og:image:type" content="image/png">
+<meta property="article:published_time" content="2015-04-26T19:25:43+00:00">
+<meta property="article:modified_time" content="2015-05-02T07:05:44+00:00">
+<meta property="article:author" content="http://www.simplecodestuffs.com/author/jamil/">
+<meta property="article:publisher" content="http://www.simplecodestuffs.com/">
+<meta property="article:section" content="Ajax">
+<meta property="article:section" content="AngularJS">
+<meta property="article:section" content="Servlet">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="Android Tutorials">
+<meta property="article:tag" content="Complete Android Tutorial">
+<meta property="article:tag" content="Soapui">
+<meta property="article:tag" content="soapui Tutorials">
+<meta property="article:tag" content="Complete soapui Tutorial">
+<meta property="article:tag" content="Sharepoint 2010.Sharepoint 2010 tutorials">
+<meta property="article:tag" content="complete Sharepoint 2010 tutorial">
+<meta property="article:tag" content="struts 2">
+<meta property="article:tag" content="struts 2 tutorials">
+<meta property="article:tag" content="complete struts 2 tutorials">
+<meta property="article:tag" content="spring">
+<meta property="article:tag" content="spring tutorials">
+<meta property="article:tag" content="complete spring tutorial">
+<meta property="article:tag" content="angularjs interacting with java servlet using json">
+<meta name="dcterms.title" content="AngularJS Interacting with Java Servlet using JSON">
+<meta name="dcterms.identifier" content="http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/">
+<meta name="dcterms.creator" content="Mohaideen, Jamil">
+<meta name="dcterms.created" content="2015-04-26T19:25:43+00:00">
+<meta name="dcterms.available" content="2015-04-26T19:25:43+00:00">
+<meta name="dcterms.modified" content="2015-05-02T07:05:44+00:00">
+<meta name="dcterms.description" content="AngularJS Interacting with Java Servlet using JSON">
+<meta name="dcterms.subject" content="Android">
+<meta name="dcterms.subject" content="Android Tutorials">
+<meta name="dcterms.subject" content="Complete Android Tutorial">
+<meta name="dcterms.subject" content="Soapui">
+<meta name="dcterms.subject" content="soapui Tutorials">
+<meta name="dcterms.subject" content="Complete soapui Tutorial">
+<meta name="dcterms.subject" content="Sharepoint 2010.Sharepoint 2010 tutorials">
+<meta name="dcterms.subject" content="complete Sharepoint 2010 tutorial">
+<meta name="dcterms.subject" content="struts 2">
+<meta name="dcterms.subject" content="struts 2 tutorials">
+<meta name="dcterms.subject" content="complete struts 2 tutorials">
+<meta name="dcterms.subject" content="spring">
+<meta name="dcterms.subject" content="spring tutorials">
+<meta name="dcterms.subject" content="complete spring tutorial">
+<meta name="dcterms.subject" content="angularjs interacting with java servlet using json">
+<meta name="dcterms.language" content="en-US">
+<meta name="dcterms.publisher" content="http://www.simplecodestuffs.com/">
+<meta name="dcterms.rights" content="http://www.simplecodestuffs.com/">
+<meta name="dcterms.coverage" content="World">
+<meta name="dcterms.type" content="Text">
+<meta name="dcterms.format" content="text/html">
+<meta name="dcterms.hasPart" content="http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/angular2/">
+<meta name="dcterms.hasPart" content="http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/angularjs-demo/">
+<meta name="dcterms.hasPart" content="http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/angularjs-demo1/">
+<!-- END Metadata added by Add-Meta-Tags WordPress plugin -->
+
+
+<!-- This site is optimized with the Yoast SEO plugin v2.3.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="AngularJS Interacting with Java Servlet using JSON">
+<meta name="keywords" content="AngularJS Interacting with Java Servlet using JSON">
+<link rel="canonical" href="http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/">
+<link rel="publisher" href="http://google.com/+Simplecodestuffs">
+<!-- / Yoast SEO plugin. -->
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.simplecodestuffs.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.10"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/wp-emoji-release.min.js.download" type="text/javascript"></script>
+		<meta content="Aggregate v.2.8" name="generator"><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="xyz_cfm_short_code_style-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/xyz_cfm_shortcode_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-style-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/jquery-ui.css" type="text/css" media="all">
+<link rel="stylesheet" id="prettify-gc-syntax-highlighter-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/prettify.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="wsl-widget-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-post-navigation-style-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/style(2).css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-pagenavi-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/pagenavi-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="et_responsive-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/responsive.css" type="text/css" media="all">
+<link rel="stylesheet" id="et-shortcodes-css-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/shortcodes.css" type="text/css" media="all">
+<link rel="stylesheet" id="et-shortcodes-responsive-css-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/shortcodes_responsive.css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/jetpack.css" type="text/css" media="all">
+<link rel="stylesheet" id="better-author-bio-div-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/better-author-bio-div.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-social-links-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/wp-social-links.css" type="text/css" media="all">
+<link rel="stylesheet" id="fancybox-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/jquery.fancybox-1.3.4.css" type="text/css" media="screen">
+<link rel="stylesheet" id="et_page_templates-css" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/page_templates.css" type="text/css" media="screen">
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.2 - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-42979552-1']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/jquery.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/jquery-migrate.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var myPPSAjax = {"ajaxurl":"http:\/\/www.simplecodestuffs.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/my_ppsChecker_script.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/jquery.cycle.all.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var norightclick_args = {"rightclick":"Y","draganddrop":"Y"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/no-right-click.js.download"></script>
+<meta name="generator" content="WordPress 4.2.10">
+<script type="text/javascript">
+	window._wp_rp_static_base_url = 'https://wprp.zemanta.com/static/';
+	window._wp_rp_wp_ajax_url = "http://www.simplecodestuffs.com/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '3.5.4';
+	window._wp_rp_post_id = '11388';
+	window._wp_rp_num_rel_posts = '4';
+	window._wp_rp_thumbnails = true;
+	window._wp_rp_post_title = 'AngularJS+Interacting+with+Java+Servlet+using+JSON';
+	window._wp_rp_post_tags = ['ajax', 'servlet', 'anguarjs', 'servlet', 'angularjs', 'ajax', 'workspac', 'js', 'eclips', 'updat', 'web', 'java', 'post', 'server', 'json', 'a', 'tomcat', 'jsp', 'file', 'librari', 'ajax'];
+	window._wp_rp_promoted_content = true;
+</script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/loader.js.download" async=""></script>
+<link rel="stylesheet" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/vertical.css">
+<style type="text/css">
+.related_post_title {
+}
+ul.related_post {
+}
+ul.related_post li {
+}
+ul.related_post li a {
+}
+ul.related_post li img {
+}</style>
+<style type="text/css">
+					.wp-post-navigation a{
+					text-decoration: none;
+font:bold 16px sans-serif, arial;
+color: #666;
+					}
+				 </style>
+<link rel="dns-prefetch" href="http://jetpack.wordpress.com/">
+<link rel="dns-prefetch" href="http://s0.wp.com/">
+<link rel="dns-prefetch" href="http://s1.wp.com/">
+<link rel="dns-prefetch" href="http://s2.wp.com/">
+<link rel="dns-prefetch" href="http://public-api.wordpress.com/">
+<link rel="dns-prefetch" href="http://0.gravatar.com/">
+<link rel="dns-prefetch" href="http://1.gravatar.com/">
+<link rel="dns-prefetch" href="http://2.gravatar.com/">
+<link rel="dns-prefetch" href="http://i0.wp.com/">
+<link rel="dns-prefetch" href="http://i1.wp.com/">
+<link rel="dns-prefetch" href="http://i2.wp.com/">
+<style type="text/css">img#wpstats{display:none}</style><!-- used in scripts --><meta name="et_featured_auto_speed" content="3000"><meta name="et_disable_toptier" content="0"><meta name="et_featured_slider_pause" content="1"><meta name="et_featured_slider_auto" content="1"><meta name="et_theme_folder" content="http://www.simplecodestuffs.com/wp-content/themes/Aggregate"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><style type="text/css">#content-area { background-image: url(http://www.simplecodestuffs.com/wp-content/themes/Aggregate/images/body-bg5.png); }</style><link id="ubuntu" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/css(2)" rel="stylesheet" type="text/css"><style type="text/css">h1,h2,h3,h4,h5,h6 { font-family: 'Ubuntu', Arial, sans-serif !important;  }</style><style type="text/css">h1,h2,h3,h4,h5,h6, h2 a, h3 a, h4 a, h5 a, h6 a {  }
+		h2.featured-title a { color: #fff !important; }
+		.main-title { color: #48423F !important; }
+		</style><link id="ubuntu" href="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/css(2)" rel="stylesheet" type="text/css"><style type="text/css">body { font-family: 'Ubuntu', Arial, sans-serif !important;  }</style><style type="text/css">body {  }</style><link rel="shortcut icon" href="http://www.simplecodestuffs.com/wp-content/uploads/2013/02/android.jpg"><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+	<style type="text/css">
+		#et_pt_portfolio_gallery { margin-left: -41px; margin-right: -51px; }
+		.et_pt_portfolio_item { margin-left: 35px; }
+		.et_portfolio_small { margin-left: -40px !important; }
+		.et_portfolio_small .et_pt_portfolio_item { margin-left: 32px !important; }
+		.et_portfolio_large { margin-left: -26px !important; }
+		.et_portfolio_large .et_pt_portfolio_item { margin-left: 11px !important; }
+	</style>
+
+<style id="custom-css-css">/*
+Welcome to Custom CSS!
+
+CSS (Cascading Style Sheets) is a kind of code that tells the browser how
+to render a web page. You may delete these comments and get started with
+your customizations.
+
+By default, your stylesheet will be loaded after the theme stylesheets,
+which means that your rules can take precedence and override the theme CSS
+rules. Just write here what you want to change, you don't need to copy all
+your theme's stylesheet content.
+*/</style>
+<!-- ## NXS/OG ## -->
+<!-- ## NXS/OG ## -->
+
+
+<script type="text/javascript" async="" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/embed.js.download"></script><script async="" type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/count.js.download"></script><script src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/count-data.js.download"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style><script src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/secureAnonymousFramework"></script><style type="text/css">* html #li_ui_li_gen_1485520678514_0 a#li_ui_li_gen_1485520678514_0-link{height:1% !important;}#li_ui_li_gen_1485520678514_0{position:relative !important;overflow:visible !important;display:block !important;}#li_ui_li_gen_1485520678514_0 span{-webkit-box-sizing:content-box !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important;}#li_ui_li_gen_1485520678514_0 a#li_ui_li_gen_1485520678514_0-link{border:0 !important;height:20px !important;text-decoration:none !important;padding:0 !important;margin:0 !important;display:inline-block !important;}#li_ui_li_gen_1485520678514_0 a#li_ui_li_gen_1485520678514_0-link:link, #li_ui_li_gen_1485520678514_0 a#li_ui_li_gen_1485520678514_0-link:visited, #li_ui_li_gen_1485520678514_0 a#li_ui_li_gen_1485520678514_0-link:hover, #li_ui_li_gen_1485520678514_0 a#li_ui_li_gen_1485520678514_0-link:active{border:0 !important;text-decoration:none !important;}#li_ui_li_gen_1485520678514_0 a#li_ui_li_gen_1485520678514_0-link:after{content:"." !important;display:block !important;clear:both !important;visibility:hidden !important;line-height:0 !important;height:0 !important;}#li_ui_li_gen_1485520678514_0 #li_ui_li_gen_1485520678514_0-logo{background-image:url(https://static.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-position:0px -593px !important;background-repeat:no-repeat !important;background-color:#0077b5 !important;background-size:initial !important;cursor:pointer !important;border:0 !important;border-right:1px solid #066094 !important;text-indent:-9999em !important;overflow:hidden !important;padding:0 !important;margin:0 !important;position:absolute !important;left:0px !important;top:0px !important;display:block !important;width:20px !important;height:20px !important;float:right !important;border-radius:2px !important;-webkit-border-radius:2px !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;}#li_ui_li_gen_1485520678514_0 #li_ui_li_gen_1485520678514_0-title{color:#fff !important;cursor:pointer !important;display:block !important;white-space:nowrap !important;float:left !important;margin-left:1px !important;vertical-align:top !important;overflow:hidden !important;text-align:center !important;height:18px !important;padding:0 4px 0 23px !important;border:1px solid #000 !important;border-top-color:#0077b5 !important;border-right-color:#0077b5 !important;border-bottom-color:#0077b5 !important;border-left-color:#0077b5 !important;text-shadow:0 -1px #005887 !important;line-height:20px !important;border-radius:2px !important;-webkit-border-radius:2px !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;background-color:#0077b5 !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#0077b5), color-stop(100%,#0077b5)) !important; background-image: -webkit-linear-gradient(top, #0077b5 0%, #0077b5 100%) !important;}#li_ui_li_gen_1485520678514_0.hovered #li_ui_li_gen_1485520678514_0-title{border:1px solid #000 !important;border-top-color:#0369a0 !important;border-right-color:#0369a0 !important;border-bottom-color:#0369a0 !important;border-left-color:#0369a0 !important;background-color:#0369a0 !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#0369a0), color-stop(100%,#0369a0)) !important; background-image: -webkit-linear-gradient(top, #0369a0 0%, #0369a0 100%) !important;}#li_ui_li_gen_1485520678514_0.clicked #li_ui_li_gen_1485520678514_0-title, #li_ui_li_gen_1485520678514_0.down #li_ui_li_gen_1485520678514_0-title{color:#fff !important;border:1px solid #000 !important;border-top-color:#066094 !important;border-right-color:#066094 !important;border-bottom-color:#066094 !important;border-left-color:#066094 !important;background-color:#066094 !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#066094), color-stop(100%,#066094)) !important; background-image: -webkit-linear-gradient(top, #066094 0%, #066094 100%) !important;}.IN-shadowed #li_ui_li_gen_1485520678514_0 #li_ui_li_gen_1485520678514_0-title{}.IN-shadowed #li_ui_li_gen_1485520678514_0.hovered #li_ui_li_gen_1485520678514_0-title{}.IN-shadowed #li_ui_li_gen_1485520678514_0.clicked #li_ui_li_gen_1485520678514_0-title, .IN-shadowed #li_ui_li_gen_1485520678514_0.down #li_ui_li_gen_1485520678514_0-title{}#li_ui_li_gen_1485520678514_0 #li_ui_li_gen_1485520678514_0-title-text, #li_ui_li_gen_1485520678514_0 #li_ui_li_gen_1485520678514_0-title-text *{color:#fff !important;font-size:11px !important;font-family:Arial, sans-serif !important;font-weight:bold !important;font-style:normal !important;-webkit-font-smoothing:antialiased !important;display:inline-block !important;background:transparent none !important;vertical-align:top !important;height:18px !important;line-height:20px !important;float:none !important;}#li_ui_li_gen_1485520678514_0 #li_ui_li_gen_1485520678514_0-title-text strong{font-weight:bold !important;}#li_ui_li_gen_1485520678514_0 #li_ui_li_gen_1485520678514_0-title-text em{font-style:italic !important;}#li_ui_li_gen_1485520678514_0.hovered #li_ui_li_gen_1485520678514_0-title-text, #li_ui_li_gen_1485520678514_0.hovered #li_ui_li_gen_1485520678514_0-title-text *{color:#fff !important;}#li_ui_li_gen_1485520678514_0.clicked #li_ui_li_gen_1485520678514_0-title-text, #li_ui_li_gen_1485520678514_0.down #li_ui_li_gen_1485520678514_0-title-text, #li_ui_li_gen_1485520678514_0.clicked #li_ui_li_gen_1485520678514_0-title-text *, #li_ui_li_gen_1485520678514_0.down #li_ui_li_gen_1485520678514_0-title-text *{color:#fff !important;}#li_ui_li_gen_1485520678514_0 #li_ui_li_gen_1485520678514_0-title #li_ui_li_gen_1485520678514_0-mark{display:inline-block !important;width:0px !important;overflow:hidden !important;}.success #li_ui_li_gen_1485520678514_0 #li_ui_li_gen_1485520678514_0-title{color:#fff !important;border-top-color:#0077b5 !important;border-right-color:#0077b5 !important;border-bottom-color:#0077b5 !important;border-left-color:#0077b5 !important;background-color:#0077b5 !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#0077b5), color-stop(100%,#0077b5)) !important; background-image: -webkit-linear-gradient(top, #0077b5 0%, #0077b5 100%) !important;}.success #li_ui_li_gen_1485520678514_0 #li_ui_li_gen_1485520678514_0-title-text, .success #li_ui_li_gen_1485520678514_0 #li_ui_li_gen_1485520678514_0-title-text *{color:#fff !important;}.IN-shadowed .success #li_ui_li_gen_1485520678514_0 #li_ui_li_gen_1485520678514_0-title{}.success #li_ui_li_gen_1485520678514_0.hovered #li_ui_li_gen_1485520678514_0-title{color:#fff !important;border-top-color:#0369a0 !important;border-right-color:#0369a0 !important;border-bottom-color:#0369a0 !important;border-left-color:#0369a0 !important;background-color:#0369a0 !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#0369a0), color-stop(100%,#0369a0)) !important; background-image: -webkit-linear-gradient(top, #0369a0 0%, #0369a0 100%) !important;}.success #li_ui_li_gen_1485520678514_0.hovered #li_ui_li_gen_1485520678514_0-title-text, .success #li_ui_li_gen_1485520678514_0.hovered #li_ui_li_gen_1485520678514_0-title-text *{color:#fff !important;}.success #li_ui_li_gen_1485520678514_0.clicked #li_ui_li_gen_1485520678514_0-title, .success #li_ui_li_gen_1485520678514_0.down #li_ui_li_gen_1485520678514_0-title{color:#fff !important;border-top-color:#066094 !important;border-right-color:#066094 !important;border-bottom-color:#066094 !important;border-left-color:#066094 !important;background-color:#066094 !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#066094), color-stop(100%,#066094)) !important; background-image: -webkit-linear-gradient(top, #066094 0%, #066094 100%) !important;}.success #li_ui_li_gen_1485520678514_0.clicked #li_ui_li_gen_1485520678514_0-title-text, .success #li_ui_li_gen_1485520678514_0.down #li_ui_li_gen_1485520678514_0-title-text, .success #li_ui_li_gen_1485520678514_0.clicked #li_ui_li_gen_1485520678514_0-title-text *, .success #li_ui_li_gen_1485520678514_0.down #li_ui_li_gen_1485520678514_0-title-text *{color:#fff !important;}.IN-shadowed .success #li_ui_li_gen_1485520678514_0.clicked #li_ui_li_gen_1485520678514_0-title, .IN-shadowed .success #li_ui_li_gen_1485520678514_0.down #li_ui_li_gen_1485520678514_0-title{}#li_ui_li_gen_1485520678530_1-container.IN-right {display:inline-block !important;float:left !important;overflow:visible !important;position:relative !important;height:20px !important;padding-left:2px !important;line-height:1px !important;cursor:pointer !important;}#li_ui_li_gen_1485520678530_1.IN-right {display:block !important;float:left !important;height:20px !important;margin-right:4px !important;padding-right:4px !important;background-image:url(https://static.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:right -447px !important;}#li_ui_li_gen_1485520678530_1-inner.IN-right {display:block !important;float:left !important;padding-left:8px !important;text-align:center !important;background-image:url(https://static.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:0px -426px !important;}#li_ui_li_gen_1485520678530_1-content.IN-right {display:inline !important;font-size:11px !important;color:#4e4e4e !important;font-weight:bold !important;font-family:Arial, sans-serif !important;line-height:20px !important;padding:0 5px 0 5px !important;}#li_ui_li_gen_1485520678530_1-container.IN-empty {display:none !important;}#li_ui_li_gen_1485520678530_1-container.IN-hidden #li_ui_li_gen_1485520678530_1 {display:none !important;}</style></head>
+<body class="single single-post postid-11388 single-format-standard custom-background chrome et_includes_sidebar">
+		<div id="top-header">
+		<div id="top-shadow"></div>
+		<div id="bottom-shadow"></div>
+		<div class="container clearfix">
+			<a href="http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/#" class="mobile_nav closed">Pages Navigation Menu<span></span><ul id="mobile_menu" class="et_mobile_menu"><li id="menu-item-1892" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1892 et_first_mobile_item"><a href="http://www.simplecodestuffs.com/home">All Tutorial</a></li>
+<li id="menu-item-9407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-9407"><a href="http://www.simplecodestuffs.com/">Home</a></li>
+<li id="menu-item-6955" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6955"><a href="http://www.simplecodestuffs.com/about-us/">About us</a></li>
+<li id="menu-item-1903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1903"><a href="http://www.simplecodestuffs.com/contact-us/">Contact Us</a></li>
+</ul></a>			<ul id="top-menu" class="nav sf-js-enabled"><li id="menu-item-1892" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1892"><a href="http://www.simplecodestuffs.com/home">All Tutorial</a></li>
+<li id="menu-item-9407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-9407"><a href="http://www.simplecodestuffs.com/">Home</a></li>
+<li id="menu-item-6955" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6955"><a href="http://www.simplecodestuffs.com/about-us/">About us</a></li>
+<li id="menu-item-1903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1903"><a href="http://www.simplecodestuffs.com/contact-us/">Contact Us</a></li>
+</ul>
+			<div id="search-form">
+				<form method="get" id="searchform" action="http://www.simplecodestuffs.com/">
+					<input type="text" value="search this site..." name="s" id="searchinput">
+					<input type="image" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/search_btn.png" id="searchsubmit">
+				</form>
+			</div> <!-- end #search-form -->
+		</div> <!-- end .container -->
+	</div> <!-- end #top-header -->
+
+	<div id="content-area">
+		<div id="content-top-light">
+			<div id="top-stitch"></div>
+			<div class="container">
+				<div id="logo-area">
+					<a href="http://www.simplecodestuffs.com/">
+												<img src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/logo.png" alt="SimpleCodeStuffs" id="logo">
+					</a>
+					<p id="slogan">Coding is much easier than you think</p>
+									</div> <!-- end #logo-area -->
+				<div id="content">
+					<div id="inner-border">
+						<div id="content-shadow">
+							<div id="content-top-shadow">
+								<div id="content-bottom-shadow">
+									<div id="second-menu" class="clearfix">
+										<a href="http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/#" class="mobile_nav closed">Categories Navigation Menu<span></span><ul id="category_mobile_menu" class="et_mobile_menu"><li id="menu-item-1904" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1904 et_first_mobile_item"><a href="http://www.simplecodestuffs.com/android/" class="sf-with-ul">Android<span class="sf-sub-indicator"> »</span></a>
+<ul class="sub-menu" style="display: none; visibility: hidden;">
+	<li id="menu-item-1914" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1914"><a href="http://www.simplecodestuffs.com/android-tutorials/">Android Tutorial</a></li>
+	<li id="menu-item-1913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1913 even-item"><a href="http://www.simplecodestuffs.com/android-updates/">Android Updates</a></li>
+</ul>
+</li>
+<li id="menu-item-1916" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1916"><a href="http://www.simplecodestuffs.com/spring-tutorial-2/">Spring Tutorial</a></li>
+<li id="menu-item-1908" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1908"><a href="http://www.simplecodestuffs.com/struts-2/" class="sf-with-ul">Struts-2<span class="sf-sub-indicator"> »</span></a>
+<ul class="sub-menu" style="display: none; visibility: hidden;">
+	<li id="menu-item-1919" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1919"><a href="http://www.simplecodestuffs.com/struts-2-tutorials/">Struts 2 Tutorial</a></li>
+	<li id="menu-item-1912" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1912 even-item"><a href="http://www.simplecodestuffs.com/struts-2-updates/">Struts-1 &amp; 2 Updates</a></li>
+</ul>
+</li>
+<li id="menu-item-10445" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10445"><a href="http://www.simplecodestuffs.com/servlet-jsp-tutorial-beginners/">Servlet &amp; JSP</a></li>
+<li id="menu-item-11167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11167"><a href="http://www.simplecodestuffs.com/hibernate-tutorial/">Hibernate</a></li>
+<li id="menu-item-10093" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10093"><a href="http://www.simplecodestuffs.com/ajax-in-java/">Ajax</a></li>
+<li id="menu-item-7285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7285"><a href="http://www.simplecodestuffs.com/soap-web-services-with-jax-ws/">SOAP Web Services</a></li>
+<li id="menu-item-1917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1917"><a class="sf-with-ul">Core Java<span class="sf-sub-indicator"> »</span></a>
+<ul class="sub-menu" style="display: none; visibility: hidden;">
+	<li id="menu-item-7725" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7725"><a href="http://www.simplecodestuffs.com/jdbc-tutorial/">JDBC Tutorial</a></li>
+	<li id="menu-item-1918" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1918 even-item"><a href="http://www.simplecodestuffs.com/java-xls-xlsx-csv-quries">XLS -XLSX -CSV I/O</a></li>
+	<li id="menu-item-4372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4372"><a href="http://www.simplecodestuffs.com/ftp-in-java/">FTP in Java</a></li>
+</ul>
+</li>
+<li id="menu-item-1906" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1906"><a href="http://www.simplecodestuffs.com/soap-ui/" class="sf-with-ul">Soap-UI<span class="sf-sub-indicator"> »</span></a>
+<ul class="sub-menu" style="display: none; visibility: hidden;">
+	<li id="menu-item-1915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1915"><a href="http://www.simplecodestuffs.com/soapui-tutorial/">SOAPUI Tutorials</a></li>
+	<li id="menu-item-7027" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7027 even-item"><a href="http://www.simplecodestuffs.com/soap-ui-updates">Soap UI Updates</a></li>
+</ul>
+</li>
+</ul></a>										<ul id="secondary-menu" class="nav sf-js-enabled"><li id="menu-item-1904" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1904"><a href="http://www.simplecodestuffs.com/android/" class="sf-with-ul">Android<span class="sf-sub-indicator"> »</span></a>
+<ul class="sub-menu" style="display: none; visibility: hidden;">
+	<li id="menu-item-1914" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1914"><a href="http://www.simplecodestuffs.com/android-tutorials/">Android Tutorial</a></li>
+	<li id="menu-item-1913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1913 even-item"><a href="http://www.simplecodestuffs.com/android-updates/">Android Updates</a></li>
+</ul>
+</li>
+<li id="menu-item-1916" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1916"><a href="http://www.simplecodestuffs.com/spring-tutorial-2/">Spring Tutorial</a></li>
+<li id="menu-item-1908" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1908"><a href="http://www.simplecodestuffs.com/struts-2/" class="sf-with-ul">Struts-2<span class="sf-sub-indicator"> »</span></a>
+<ul class="sub-menu" style="visibility: hidden; display: none;">
+	<li id="menu-item-1919" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1919"><a href="http://www.simplecodestuffs.com/struts-2-tutorials/">Struts 2 Tutorial</a></li>
+	<li id="menu-item-1912" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1912 even-item"><a href="http://www.simplecodestuffs.com/struts-2-updates/">Struts-1 &amp; 2 Updates</a></li>
+</ul>
+</li>
+<li id="menu-item-10445" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10445"><a href="http://www.simplecodestuffs.com/servlet-jsp-tutorial-beginners/">Servlet &amp; JSP</a></li>
+<li id="menu-item-11167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11167"><a href="http://www.simplecodestuffs.com/hibernate-tutorial/">Hibernate</a></li>
+<li id="menu-item-10093" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10093"><a href="http://www.simplecodestuffs.com/ajax-in-java/">Ajax</a></li>
+<li id="menu-item-7285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7285"><a href="http://www.simplecodestuffs.com/soap-web-services-with-jax-ws/">SOAP Web Services</a></li>
+<li id="menu-item-1917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1917"><a class="sf-with-ul">Core Java<span class="sf-sub-indicator"> »</span></a>
+<ul class="sub-menu" style="display: none; visibility: hidden;">
+	<li id="menu-item-7725" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7725"><a href="http://www.simplecodestuffs.com/jdbc-tutorial/">JDBC Tutorial</a></li>
+	<li id="menu-item-1918" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1918 even-item"><a href="http://www.simplecodestuffs.com/java-xls-xlsx-csv-quries">XLS -XLSX -CSV I/O</a></li>
+	<li id="menu-item-4372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4372"><a href="http://www.simplecodestuffs.com/ftp-in-java/">FTP in Java</a></li>
+</ul>
+</li>
+<li id="menu-item-1906" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1906"><a href="http://www.simplecodestuffs.com/soap-ui/" class="sf-with-ul">Soap-UI<span class="sf-sub-indicator"> »</span></a>
+<ul class="sub-menu" style="display: none; visibility: hidden;">
+	<li id="menu-item-1915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1915"><a href="http://www.simplecodestuffs.com/soapui-tutorial/">SOAPUI Tutorials</a></li>
+	<li id="menu-item-7027" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7027 even-item"><a href="http://www.simplecodestuffs.com/soap-ui-updates">Soap UI Updates</a></li>
+</ul>
+</li>
+</ul>									</div> <!-- end #second-menu -->
+<div id="main-content" class="clearfix">
+	<div id="left-area">
+		<div id="breadcrumbs">
+					<a href="http://www.simplecodestuffs.com/">Home</a> <span class="raquo">»</span>
+				
+									<a href="http://www.simplecodestuffs.com/ajax/">Ajax</a> <span class="raquo">»</span> AngularJS Interacting with Java Servlet using JSON					</div> <!-- end #breadcrumbs -->		
+<div id="entries">
+		
+			<div class="entry post clearfix">
+			<style type="text/css">
+#sr_friends_single
+{padding-bottom: 180px;}
+</style>
+<script type="text/javascript">
+$('.thumb').append("<div id='test'></test>");
+</script>							
+			<h1 class="title">AngularJS Interacting with Java Servlet using JSON</h1>
+				<div class="post-meta">
+		<p class="meta-info">
+			Posted  by <a href="http://www.simplecodestuffs.com/author/jamil/" title="Posts by Mohaideen Jamil" rel="author">Mohaideen Jamil</a> on Apr 26, 2015 in <a href="http://www.simplecodestuffs.com/ajax/" rel="category tag">Ajax</a>, <a href="http://www.simplecodestuffs.com/angularjs/" rel="category tag">AngularJS</a>, <a href="http://www.simplecodestuffs.com/servlet/" rel="category tag">Servlet</a> | <a href="http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/#disqus_thread" data-disqus-identifier="11388 http://www.simplecodestuffs.com/?p=11388">4 Comments</a>		</p>
+	</div> <!-- end .post-meta -->
+			
+											
+							
+			<p><img src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/Angular2.png" alt="Angular2" class="aligncenter size-full wp-image-11389" width="550" height="278"><br>
+&nbsp;<br>
+In this post, I am going to demonstrate a simple example on how to make AJAX calls from a JSP page to a Servlet using AngularJS and update the same JSP page back with the JSON response from the Servlet. In other words, this post will give you an overview on how to integrate AngularJS in a Java web applications.<br>
+&nbsp;<br>
+There are many JSON libraries available that can be used to pass AJAX updates between the server and the client. I am going to use <a href="https://code.google.com/p/google-gson/downloads/list" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;https://code.google.com/p/google-gson/downloads/list&#39;, &#39;google’s gson&#39;]);" title="Google Gson" target="_blank" rel="nofollow">google’s gson</a> library in this example.<br>
+&nbsp;<br>
+Below are the steps to reproduce to create a simple AngularJS enabled Java Web Application using Eclipse and Tomcat 7,<br>
+&nbsp;</p>
+<h4>How to use?</h4>
+<p>&nbsp;<br>
+First of all create a <a href="http://www.simplecodestuffs.com/create-servlet-eclipse-tomcat-server/" target="_blank">“Dynamic Web Project”</a> in Eclipse and <a href="https://angularjs.org/" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;https://angularjs.org/&#39;, &#39;download the AngularJS library&#39;]);" title="AngularJS" target="_blank" rel="nofollow">download the AngularJS library</a> and place in js folder of eclipse work-space, and refer this files in the head section in the jsp, this file is responsible for the AJAX call made to the servlet and for updating the response back in the JSP.<br>
+&nbsp;</p>
+<h4>Jsp Page</h4>
+<p>&nbsp;</p>
+<pre class="prettyprint "><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="tag">&lt;html&gt;</span><span class="pln"><br></span><span class="tag">&lt;head&gt;</span><span class="pln"><br></span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"ISO-8859-1"</span><span class="tag">&gt;</span><span class="pln"><br></span><span class="tag">&lt;title&gt;</span><span class="pln">AJAX with Servlets using AngularJS</span><span class="tag">&lt;/title&gt;</span><span class="pln"><br></span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"js/angular.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln"><br></span><span class="tag">&lt;script&gt;</span><span class="pln"><br></span><span class="kwd">var</span><span class="pln"> app </span><span class="pun">=</span><span class="pln"> angular</span><span class="pun">.</span><span class="pln">module</span><span class="pun">(</span><span class="str">'myApp'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[]);</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> </span><span class="typ">MyController</span><span class="pun">(</span><span class="pln">$scope</span><span class="pun">,</span><span class="pln"> $http</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; $scope</span><span class="pun">.</span><span class="pln">getDataFromServer </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $http</span><span class="pun">({</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; method </span><span class="pun">:</span><span class="pln"> </span><span class="str">'GET'</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; url </span><span class="pun">:</span><span class="pln"> </span><span class="str">'javaAngularJS'</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}).</span><span class="pln">success</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">data</span><span class="pun">,</span><span class="pln"> status</span><span class="pun">,</span><span class="pln"> headers</span><span class="pun">,</span><span class="pln"> config</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $scope</span><span class="pun">.</span><span class="pln">person </span><span class="pun">=</span><span class="pln"> data</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}).</span><span class="pln">error</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">data</span><span class="pun">,</span><span class="pln"> status</span><span class="pun">,</span><span class="pln"> headers</span><span class="pun">,</span><span class="pln"> config</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// called asynchronously if an error occurs</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// or server returns response with an error status.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">});</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">};</span><span class="pln"><br></span><span class="pun">};</span><span class="pln"><br></span><span class="tag">&lt;/script&gt;</span><span class="pln"><br></span><span class="tag">&lt;/head&gt;</span><span class="pln"><br></span><span class="tag">&lt;body&gt;</span><span class="pln"><br></span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-app</span><span class="pun">=</span><span class="atv">"myApp"</span><span class="tag">&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-controller</span><span class="pun">=</span><span class="atv">"MyController"</span><span class="tag">&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">ng-click</span><span class="pun">=</span><span class="atv">"getDataFromServer()"</span><span class="tag">&gt;</span><span class="pln">Fetch data from server</span><span class="tag">&lt;/button&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="tag">&lt;p&gt;</span><span class="pln">First Name : {{person.firstName}}</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="tag">&lt;p&gt;</span><span class="pln">Last Name : {{person.lastName}}</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;/div&gt;</span><span class="pln"><br></span><span class="tag">&lt;/div&gt;</span><span class="pln"><br></span><span class="tag">&lt;/body&gt;</span><span class="pln"><br></span><span class="tag">&lt;/html&gt;</span></pre>
+<p>&nbsp;</p>
+<h4>HTML – Data Binding</h4>
+<p>&nbsp;<br>
+We can display JSON data values in jsp by using their attributes in expressions like {{person.firstName}}, {{person.lastName}} etc.. Here the id=”ng-app” is most important for Internet Explorer browser data binding.<br>
+&nbsp;<br>
+<strong>ng-controller</strong><br>
+Specifies a JavaScript controller class that evaluates HTML expressions.</p>
+<p><strong>ng-click</strong><br>
+Angular on click event<br>
+&nbsp;</p>
+<h4>Model class</h4>
+<p>&nbsp;</p>
+<pre class="prettyprint "><span class="kwd">package</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">model</span><span class="pun">;</span><span class="pln"><br><br></span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">PersonData</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> firstName</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> lastName</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> getFirstName</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> firstName</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setFirstName</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> firstName</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">firstName </span><span class="pun">=</span><span class="pln"> firstName</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> getLastName</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> lastName</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setLastName</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> lastName</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">lastName </span><span class="pun">=</span><span class="pln"> lastName</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br></span><span class="pun">}</span></pre>
+<p>&nbsp;<br>
+Recommended Reading:</p>
+<ul>
+<li><a href="http://www.simplecodestuffs.com/ajax-implementation-in-jsp-and-servlet-using-jquery/" title="AJAX in Servlet &amp; jsp using JQuery – Java web application" target="_blank">AJAX in Servlet &amp; jsp using JQuery</a></li>
+<li><a href="http://www.simplecodestuffs.com/jquery-tutorial-beginners/" title="jQuery Tutorial for Beginners" target="_blank">jQuery Tutorial for Beginners</a></li>
+<li><a href="http://www.simplecodestuffs.com/autocomplete-in-java-web-application-using-jquery-and-json/" title="Autocomplete in java web application using Jquery and JSON" target="_blank">Autocomplete in java web application using Jquery and JSON</a></li>
+</ul>
+<p>&nbsp;</p>
+<h4>Servlet</h4>
+<p>&nbsp;<br>
+Now let’s go on and write the servlet which handles this Ajax call</p>
+<pre class="prettyprint "><span class="kwd">package</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">controller</span><span class="pun">;</span><span class="pln"><br><br></span><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">io</span><span class="pun">.</span><span class="typ">IOException</span><span class="pun">;</span><span class="pln"><br><br></span><span class="kwd">import</span><span class="pln"> javax</span><span class="pun">.</span><span class="pln">servlet</span><span class="pun">.</span><span class="typ">ServletException</span><span class="pun">;</span><span class="pln"><br></span><span class="kwd">import</span><span class="pln"> javax</span><span class="pun">.</span><span class="pln">servlet</span><span class="pun">.</span><span class="pln">http</span><span class="pun">.</span><span class="typ">HttpServlet</span><span class="pun">;</span><span class="pln"><br></span><span class="kwd">import</span><span class="pln"> javax</span><span class="pun">.</span><span class="pln">servlet</span><span class="pun">.</span><span class="pln">http</span><span class="pun">.</span><span class="typ">HttpServletRequest</span><span class="pun">;</span><span class="pln"><br></span><span class="kwd">import</span><span class="pln"> javax</span><span class="pun">.</span><span class="pln">servlet</span><span class="pun">.</span><span class="pln">http</span><span class="pun">.</span><span class="typ">HttpServletResponse</span><span class="pun">;</span><span class="pln"><br><br></span><span class="kwd">import</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">google</span><span class="pun">.</span><span class="pln">gson</span><span class="pun">.</span><span class="typ">Gson</span><span class="pun">;</span><span class="pln"><br></span><span class="kwd">import</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">model</span><span class="pun">.</span><span class="typ">PersonData</span><span class="pun">;</span><span class="pln"><br><br></span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">AngularJsServlet</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">HttpServlet</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">final</span><span class="pln"> </span><span class="kwd">long</span><span class="pln"> serialVersionUID </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1L</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">AngularJsServlet</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">super</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">protected</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> doGet</span><span class="pun">(</span><span class="typ">HttpServletRequest</span><span class="pln"> request</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">HttpServletResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">throws</span><span class="pln"> </span><span class="typ">ServletException</span><span class="pun">,</span><span class="pln"> </span><span class="typ">IOException</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">PersonData</span><span class="pln"> personData </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">PersonData</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; personData</span><span class="pun">.</span><span class="pln">setFirstName</span><span class="pun">(</span><span class="str">"Mohaideen"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; personData</span><span class="pun">.</span><span class="pln">setLastName</span><span class="pun">(</span><span class="str">"Jamil"</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">String</span><span class="pln"> json </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Gson</span><span class="pun">().</span><span class="pln">toJson</span><span class="pun">(</span><span class="pln">personData</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; response</span><span class="pun">.</span><span class="pln">setContentType</span><span class="pun">(</span><span class="str">"application/json"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; response</span><span class="pun">.</span><span class="pln">getWriter</span><span class="pun">().</span><span class="pln">write</span><span class="pun">(</span><span class="pln">json</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span></pre>
+<p>&nbsp;</p>
+<h4>Code Explanation</h4>
+<p>&nbsp;<br>
+When the user clicks on “Fetch data from server” button, button click event is fired via angularJS “ng-click” directive and the ‘http’ function executes the Ajax GET request on the Servlet.<br>
+&nbsp;</p>
+<h4>Web.xml</h4>
+<p>&nbsp;<br>
+Make sure you have done servlet mapping in web.xml as shown below </p>
+<pre class="prettyprint "><span class="tag">&lt;web-app&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;welcome-file-list&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;welcome-file&gt;</span><span class="pln">index.jsp</span><span class="tag">&lt;/welcome-file&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/welcome-file-list&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;servlet&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;servlet-name&gt;</span><span class="pln">javaAngularJS</span><span class="tag">&lt;/servlet-name&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;servlet-class&gt;</span><span class="pln">com.controller.AngularJsServlet</span><span class="tag">&lt;/servlet-class&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/servlet&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;servlet-mapping&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;servlet-name&gt;</span><span class="pln">javaAngularJS</span><span class="tag">&lt;/servlet-name&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;url-pattern&gt;</span><span class="pln">/javaAngularJS</span><span class="tag">&lt;/url-pattern&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/servlet-mapping&gt;</span><span class="pln"><br></span><span class="tag">&lt;/web-app&gt;</span></pre>
+<p>&nbsp;</p>
+<h4>Demo</h4>
+<p>&nbsp;<br>
+Once you done with above steps then Right click on project –&gt; Run As –&gt; Run on Server<br>
+(Note: I have used tomcat server to run this application. If you are not sure how to configure tomcat server in eclipse please follow this <a href="http://www.simplecodestuffs.com/install-eclipse-ide-configure-apache-tomcat/" title="How to install Eclipse IDE and configure apache tomcat" target="_blank">link</a>).<br>
+&nbsp;<br>
+<img src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/AngularJS-demo1.png" alt="AngularJS demo1" class="aligncenter size-full wp-image-11398" width="374" height="139"><br>
+&nbsp;<br>
+Click button: <b>Fetch data from server</b> to pass HTTP request using angularJS where Java servlet will return data as below:</p>
+<p><img src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/AngularJS-demo.png" alt="AngularJS demo" class="aligncenter size-full wp-image-11397" width="380" height="146"></p>
+<p><a href="https://drive.google.com/file/d/0B3C5CUeU01xUWDJOamFjd3pLQm8/view?usp=sharing" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;https://drive.google.com/file/d/0B3C5CUeU01xUWDJOamFjd3pLQm8/view?usp=sharing&#39;, &#39;&#39;]);" target="_blank" rel="nofollow"><img src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/download.jpg" alt="download" class="aligncenter size-full wp-image-10127" width="270" height="85"></a><br>
+&nbsp;</p>
+<h4>Reference</h4>
+<p>&nbsp;<br>
+<a href="https://docs.angularjs.org/api?PHPSESSID=cae8e98e7ca559b4605d75c813b358ee" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;https://docs.angularjs.org/api?PHPSESSID=cae8e98e7ca559b4605d75c813b358ee&#39;, &#39;AngularJS API Docs&#39;]);" title="AngularJS API Docs" target="_blank">AngularJS API Docs</a></p>
+			<div id="better-author-bio-div">
+				<div class="better-author-bio-div-info">
+				        					<img alt="" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/0407f823f663ea634d5b0a97b87db660" srcset="http://0.gravatar.com/avatar/0407f823f663ea634d5b0a97b87db660?s=120&amp;d=mm&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">										<h4>About Mohaideen Jamil</h4>
+					
+					<br>										<p class="better-author-bio-div-meta">Am currently working as a  Struts 2 Developer in a reputed IT Organisations.
+I can help you with teaching Core java and Struts 2. Follow me on <a href="https://www.facebook.com/simplecodestuffsandroid" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;https://www.facebook.com/simplecodestuffsandroid&#39;, &#39;Facebook&#39;]);" rel="nofollow">Facebook</a> or <a href="https://plus.google.com/+Simplecodestuffs/" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;https://plus.google.com/+Simplecodestuffs/&#39;, &#39;Google Plus&#39;]);" rel="nofollow">Google Plus</a>. If you like my tutorials, consider making a <a href="http://www.simplecodestuffs.com/donate-charity/" rel="nofollow">donation to this charity</a>, thanks.</p>
+										<ul>
+												                                                					</ul>
+				</div>
+			</div>
+			
+<div class="wp_rp_wrap  wp_rp_vertical" id="wp_rp_first"><div class="wp_rp_content"><h3 class="related_post_title"><br><br>Articles To Read Next<br></h3><ul class="related_post wp_rp"><li data-position="0" data-poid="in-9275" data-post-type="none"><a href="http://www.simplecodestuffs.com/ajax-implementation-in-jsp-servlet-using-jquery-and-json/" class="wp_rp_thumbnail"><img src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/jsonjqueryajax.png" alt="AJAX implementation in Servlets using JQuery and JSON" width="150" height="150"></a><a href="http://www.simplecodestuffs.com/ajax-implementation-in-jsp-servlet-using-jquery-and-json/" class="wp_rp_title">AJAX implementation in Servlets using JQuery and JSON</a></li><li data-position="1" data-poid="in-11198" data-post-type="none"><a href="http://www.simplecodestuffs.com/ajax-tooltip-in-java-web-application-using-qtip2-jquery-plugin/" class="wp_rp_thumbnail"><img src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/qTip2.png" alt="AJAX Tooltip in Java Web Application using qTip2 jQuery plugin" width="150" height="150"></a><a href="http://www.simplecodestuffs.com/ajax-tooltip-in-java-web-application-using-qtip2-jquery-plugin/" class="wp_rp_title">AJAX Tooltip in Java Web Application using qTip2 jQuery plugin</a></li><li data-position="2" data-poid="in-11306" data-post-type="none"><a href="http://www.simplecodestuffs.com/dynamic-dependent-select-box-in-jsp-servlet-using-jquery-and-json-via-ajax/" class="wp_rp_thumbnail"><img src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/Dynamic-Dependent-Select-Box-using-Jquery.png" alt="Ajax Cascading DropDownList in JSP &amp; Servlet using JQuery and JSON" width="150" height="150"></a><a href="http://www.simplecodestuffs.com/dynamic-dependent-select-box-in-jsp-servlet-using-jquery-and-json-via-ajax/" class="wp_rp_title">Ajax Cascading DropDownList in JSP &amp; Servlet using JQuery and JSON</a></li><li data-position="3" data-poid="in-10672" data-post-type="none"><a href="http://www.simplecodestuffs.com/setup-load-data-jqgrid-using-servlets-jsp/" class="wp_rp_thumbnail"><img src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/JqGrid-structure.png" alt="Setup and Load Data in jQGrid using Servlets and JSP" width="150" height="150"></a><a href="http://www.simplecodestuffs.com/setup-load-data-jqgrid-using-servlets-jsp/" class="wp_rp_title">Setup and Load Data in jQGrid using Servlets and JSP</a></li></ul></div></div>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li><a href="http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/#" class="sharing-anchor sd-button share-more"><span>Share</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-google-plus-1"><div class="googleplus1_button"><div id="___plus_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 68px; height: 20px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 68px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1485520675677" name="I0_1485520675677" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/sharebutton.html" data-gapiattached="true" title="+Share"></iframe></div></div></li><li class="share-facebook"><div class="fb-share-button fb_iframe_widget" data-href="http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/" data-layout="button_count" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=249643311490&amp;container_width=0&amp;href=http%3A%2F%2Fwww.simplecodestuffs.com%2Fangularjs-interacting-with-java-servlet-using-json%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey"><span style="vertical-align: bottom; width: 86px; height: 20px;"><iframe name="f1464590fd1124c" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:share_button Facebook Social Plugin" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/share_button.html" class="" style="border: none; visibility: visible; width: 86px; height: 20px;"></iframe></span></div></li><li class="share-end"></li><li class="share-linkedin"><div class="linkedin_button"><span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1485520678514_0"><a id="li_ui_li_gen_1485520678514_0-link" href="javascript:void(0);"><span id="li_ui_li_gen_1485520678514_0-logo">in</span><span id="li_ui_li_gen_1485520678514_0-title"><span id="li_ui_li_gen_1485520678514_0-mark"></span><span id="li_ui_li_gen_1485520678514_0-title-text">Share</span></span></a></span></span><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1485520678530_1-container" class="IN-right"><span id="li_ui_li_gen_1485520678530_1" class="IN-right"><span id="li_ui_li_gen_1485520678530_1-inner" class="IN-right"><span id="li_ui_li_gen_1485520678530_1-content" class="IN-right">3</span></span></span></span></span></span><script type="in/share+init" data-url="http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/" data-counter="right"></script></div></li><li class="share-reddit"><div class="reddit_button"><iframe src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/button1.html" height="22" width="120" scrolling="no" frameborder="0"></iframe></div></li><li class="share-end"></li><li class="share-twitter"><div class="twitter_button"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/tweet_button.html" style="width:101px; height:20px;"></iframe></div></li><li class="share-end"></li></ul></div></div></div></div></div>								</div> <!-- end .entry -->
+
+				
+						
+		
+		
+<div id="disqus_thread"><iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 1074px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe><iframe id="dsq-app4" name="dsq-app4" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/saved_resource(3).html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 586px !important;"></iframe></div>
+
+<script type="text/javascript">
+var disqus_url = 'http://www.simplecodestuffs.com/angularjs-interacting-with-java-servlet-using-json/';
+var disqus_identifier = '11388 http://www.simplecodestuffs.com/?p=11388';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'simplecodestuffs';
+var disqus_title = "AngularJS Interacting with Java Servlet using JSON";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=11388';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+	
+	</div> <!-- end #entries -->	</div> <!-- end #left-area -->
+
+	<div id="sidebar">
+	<h4 class="main-title widget-title"><a href="https://www.facebook.com/simplecodestuffsandroid"> </a></h4><div class="widget">		<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/Sh-3BhStODe.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/Sh-3BhStODe(1).html" style="border: none;"></iframe></div></div></div>
+		<div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/simplecodestuffsandroid" data-height="500" data-hide-cover="false" data-show-facepile="true" data-show-posts="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=249643311490&amp;container_width=230&amp;height=500&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fsimplecodestuffsandroid&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false"><span style="vertical-align: bottom; width: 230px; height: 214px;"><iframe name="f389a0dc59d0f18" width="1000px" height="500px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:page Facebook Social Plugin" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/page.html" style="border: none; visibility: visible; width: 230px; height: 214px;" class=""></iframe></span></div>
+		<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=249643311490&version=v2.3'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+		</div> <!-- end .widget --><h4 class="main-title widget-title"> </h4><div class="widget">	
+			<div id="___page_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 270px; height: 332px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 270px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 332px;" tabindex="0" vspace="0" width="100%" id="I1_1485520675681" name="I1_1485520675681" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/page(1).html" data-gapiattached="true" title="+Badge"></iframe></div>
+			<!-- Place this tag after the last badgev2 tag. -->
+			<script type="text/javascript">
+			  (function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+		</div> <!-- end .widget -->				<h4 class="main-title widget-title">Recently Updated Posts</h4><div class="widget">		<ul>
+					<li>
+				<a href="http://www.simplecodestuffs.com/how-to-use-jquery-dialog-as-confirm-dialog/">How to use JQuery dialog as Confirm dialog?</a>
+						</li>
+					<li>
+				<a href="http://www.simplecodestuffs.com/configuring-adding-primary-key-to-collections-in-hibernate/">Configuring &amp; Adding Primary Key to Collections in Hibernate</a>
+						</li>
+					<li>
+				<a href="http://www.simplecodestuffs.com/saving-collections-in-hibernate/">Saving Collections in Hibernate</a>
+						</li>
+					<li>
+				<a href="http://www.simplecodestuffs.com/value-object-entity-object-in-hibernate-mapping/">Value object &amp; Entity object in Hibernate mapping</a>
+						</li>
+					<li>
+				<a href="http://www.simplecodestuffs.com/composite-primary-keys-in-hibernate/">Composite Primary Keys In Hibernate</a>
+						</li>
+					<li>
+				<a href="http://www.simplecodestuffs.com/auto-generate-primary-key-in-hibernate/">Auto Generate Primary key in Hibernate</a>
+						</li>
+					<li>
+				<a href="http://www.simplecodestuffs.com/difference-between-update-and-merge-methods-in-hibernate/">Difference Between Update and Merge methods In Hibernate</a>
+						</li>
+					<li>
+				<a href="http://www.simplecodestuffs.com/table-per-class-hierarchy-using-annotation/">Table per Class Hierarchy Using Annotation</a>
+						</li>
+					<li>
+				<a href="http://www.simplecodestuffs.com/hibernate-4-hello-world-example-in-eclipse-using-annotation/">Hibernate 4 Hello World example in Eclipse using Annotation</a>
+						</li>
+					<li>
+				<a href="http://www.simplecodestuffs.com/generic-hibernate-application-requirements-xml-mapping/">Generic Hibernate Application Requirements – XML Mapping</a>
+						</li>
+				</ul>
+		</div> <!-- end .widget --></div> <!-- end #sidebar -->	
+		
+										<div id="index-top-shadow"></div>									</div> <!-- end #main-content -->
+									
+																	</div> <!-- end #content-bottom-shadow -->
+							</div> <!-- end #content-top-shadow -->
+						</div> <!-- end #content-shadow -->
+					</div> <!-- end #inner-border -->
+				</div> <!-- end #content -->
+				
+					
+				
+			</div> <!-- end .container -->
+		</div> <!-- end #content-top-light -->
+		<div id="bottom-stitch"></div>
+	</div> <!-- end #content-area -->
+
+	<div id="footer">
+		<div id="footer-top-shadow" class="clearfix">
+			<div class="container">
+				<div id="footer-widgets" class="clearfix">
+							<div id="recent-posts-3" class="footer-widget widget_recent_entries">		<h4 class="widgettitle">Recent Posts</h4>		<ul>
+					<li>
+				<a href="http://www.simplecodestuffs.com/how-to-use-jquery-dialog-as-confirm-dialog/">How to use JQuery dialog as Confirm dialog?</a>
+						</li>
+					<li>
+				<a href="http://www.simplecodestuffs.com/configuring-adding-primary-key-to-collections-in-hibernate/">Configuring &amp; Adding Primary Key to Collections in Hibernate</a>
+						</li>
+					<li>
+				<a href="http://www.simplecodestuffs.com/saving-collections-in-hibernate/">Saving Collections in Hibernate</a>
+						</li>
+				</ul>
+		</div> <!-- end .footer-widget --><div id="categories-2" class="footer-widget widget_categories"><h4 class="widgettitle">Select Your Topic</h4><label class="screen-reader-text" for="cat">Select Your Topic</label><select name="cat" id="cat" class="postform">
+	<option value="-1">Select Category</option>
+	<option class="level-0" value="478">Ajax</option>
+	<option class="level-0" value="4">Android</option>
+	<option class="level-0" value="716">AngularJS</option>
+	<option class="level-0" value="234">Core Java</option>
+	<option class="level-0" value="110">CSV</option>
+	<option class="level-0" value="541">Display Tag</option>
+	<option class="level-0" value="25">Eclipse</option>
+	<option class="level-0" value="76">FTP</option>
+	<option class="level-0" value="78">FTP Tutorial</option>
+	<option class="level-0" value="656">Hibernate</option>
+	<option class="level-0" value="723">Hibernate Annotation</option>
+	<option class="level-0" value="719">Hibernate XML Mapping</option>
+	<option class="level-0" value="215">Infopath 2010</option>
+	<option class="level-0" value="658">J2EE</option>
+	<option class="level-0" value="29">Java</option>
+	<option class="level-0" value="11">Java Excel</option>
+	<option class="level-0" value="703">Java I/O</option>
+	<option class="level-0" value="217">Java PDF</option>
+	<option class="level-0" value="465">Jboss</option>
+	<option class="level-0" value="61">JDBC</option>
+	<option class="level-0" value="270">JDBC Tutorials</option>
+	<option class="level-0" value="657">JFreeChart</option>
+	<option class="level-0" value="650">jQuery</option>
+	<option class="level-0" value="727">jQuery UI</option>
+	<option class="level-0" value="66">JSP</option>
+	<option class="level-0" value="649">jTable</option>
+	<option class="level-0" value="32">JVM</option>
+	<option class="level-0" value="237">log4j</option>
+	<option class="level-0" value="64">MySQL</option>
+	<option class="level-0" value="271">MySql Tutorial</option>
+	<option class="level-0" value="272">Oracle</option>
+	<option class="level-0" value="702">Quartz Scheduler</option>
+	<option class="level-0" value="276">RESTful Services</option>
+	<option class="level-0" value="108">RSS Feed</option>
+	<option class="level-0" value="221">Security</option>
+	<option class="level-0" value="180">Servlet</option>
+	<option class="level-0" value="79">SFTP</option>
+	<option class="level-0" value="84">SFTP Tutorial</option>
+	<option class="level-0" value="31">SharePoint 2013</option>
+	<option class="level-0" value="8">SharePoint Tutorials</option>
+	<option class="level-0" value="230">Simple code stuffs</option>
+	<option class="level-0" value="264">Soap Web Service</option>
+	<option class="level-0" value="6">Soap-UI</option>
+	<option class="level-0" value="612">Software</option>
+	<option class="level-0" value="7">Spring</option>
+	<option class="level-0" value="156">Spring Tutorial</option>
+	<option class="level-0" value="222">SQL Injection</option>
+	<option class="level-0" value="67">Struts 1</option>
+	<option class="level-0" value="87">Struts 2 Tutorial</option>
+	<option class="level-0" value="5">Struts-2</option>
+	<option class="level-0" value="27">Tomcat</option>
+	<option class="level-0" value="18">UNIX</option>
+	<option class="level-0" value="265">Web Service</option>
+	<option class="level-0" value="143">Web technology</option>
+	<option class="level-0" value="107">wicket</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			location.href = "http://www.simplecodestuffs.com/?cat=" + dropdown.options[ dropdown.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+</div> <!-- end .footer-widget --><div id="text-3" class="footer-widget widget_text"><h4 class="widgettitle">Join SCS </h4>			<div class="textwidget">
+<ul>
+			<li><a href="http://www.simplecodestuffs.com/wp-login.php?action=register">Register</a></li>			<li><a href="http://www.simplecodestuffs.com/wp-login.php">Log in</a></li>
+			<li><a href="http://www.simplecodestuffs.com/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.simplecodestuffs.com/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			
+						</ul></div>
+		</div> <!-- end .footer-widget --><div id="text-7" class="footer-widget widget_text last"><h4 class="widgettitle">Our Legal Policies</h4>			<div class="textwidget"><ul>
+						
+			<li><a href="http://www.simplecodestuffs.com/privacy-policy/">Privacy Policy</a></li>
+			<li><a href="http://www.simplecodestuffs.com/terms-and-conditions-3/">Terms and Conditions</a></li>
+<li><a href="http://www.simplecodestuffs.com/disclaimer-and-copyright-notices/">Disclaimer and Copyright Notices</a></li>
+			
+						</ul></div>
+		</div><div class="clear"></div> <!-- end .footer-widget --><div id="text-6" class="footer-widget widget_text"><h4 class="widgettitle"> </h4>			<div class="textwidget"><script type="text/javascript">
+ /*<![CDATA[*/
+ jQuery(document).ready(function() {jQuery(".abtlikebox").hover(function() {jQuery(this).stop().animate({right: "0"}, "medium");}, function() {jQuery(this).stop().animate({right: "-250"}, "medium");}, 500);});
+ /*]]>*/
+ </script>
+ <style type="text/css">
+ .abtlikebox{background: url("http://4.bp.blogspot.com/-mMtB2ANqowQ/T6es-PuSR2I/AAAAAAAAAjM/LDamrUnMJJc/s320/fb1-right.png") no-repeat scroll left center transparent !important; float: right;height: 270px;padding: 0 5px 0 46px;width: 245px;z-index:  99999;position:fixed;right:-250px;top:20%;}
+.abtlikebox div{ padding: 0; margin-right:-8px; border:4px solid  #3b5998; background:#fafafa;}
+.abtlikebox span{bottom: 4px;font: 8px "lucida grande",tahoma,verdana,arial,sans-serif;position: absolute;right: 6px;text-align: right;z-index: 99999;}
+ .abtlikebox span a{color: gray;text-decoration:none;}
+ .abtlikebox span a:hover{text-decoration:underline;}
+}
+</style>
+ <div class="abtlikebox" style="">
+     <div>
+     <iframe src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/likebox.html" scrolling="no" frameborder="0" style="border: white; overflow: hidden; height: 270px; width: 245px;background:#fafafa;"></iframe>
+     </div>
+ </div>
+
+
+</div>
+		</div> <!-- end .footer-widget -->				</div> <!-- end #footer-widgets -->
+				<p id="copyright">Designed by  <a href="http://www.webunbox.com/" title="Webunbox" target="_blank">Webunbox</a> | Powered by  <a href="http://www.simplecodestuffs.com/" target="_blank">SimpleCodeStuffs ©2013</a></p>
+			</div> <!-- end .container -->
+		</div> <!-- end #footer-top-shadow -->
+		<div id="footer-bottom-shadow"></div>
+		<div id="footer-bottom">
+			<div class="container clearfix">
+				<ul id="bottom-nav" class="bottom-nav"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1904"><a href="http://www.simplecodestuffs.com/android/">Android</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1916"><a href="http://www.simplecodestuffs.com/spring-tutorial-2/">Spring Tutorial</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1908"><a href="http://www.simplecodestuffs.com/struts-2/">Struts-2</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10445"><a href="http://www.simplecodestuffs.com/servlet-jsp-tutorial-beginners/">Servlet &amp; JSP</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11167"><a href="http://www.simplecodestuffs.com/hibernate-tutorial/">Hibernate</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10093"><a href="http://www.simplecodestuffs.com/ajax-in-java/">Ajax</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7285"><a href="http://www.simplecodestuffs.com/soap-web-services-with-jax-ws/">SOAP Web Services</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1917"><a>Core Java</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1906"><a href="http://www.simplecodestuffs.com/soap-ui/">Soap-UI</a></li>
+</ul>			</div> <!-- end .container -->
+		</div> <!-- end #footer-bottom -->
+	</div> <!-- end #footer -->
+
+	<script src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/superfish.js.download" type="text/javascript"></script>
+<script src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/custom.js.download" type="text/javascript"></script>	
+
+
+        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'simplecodestuffs';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); 
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        	
+	
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	  var postID = '11388';
+	  console.log(postID);
+	  var postAuthor = '318';
+	  console.log(postAuthor);
+	  
+	  jQuery.ajax({
+		  type: 'POST',
+		  url: myPPSAjax.ajaxurl,
+		  			data: {action: "view_site_description", post_id: postID, post_author: postAuthor},
+		  		  success: function(data){
+			  // alert(data);
+			   console.log('Count Processed')
+			   return data; 
+			  } 
+	  });
+	return false;
+});
+</script>
+	<div style="display:none">
+	<div class="grofile-hash-map-0407f823f663ea634d5b0a97b87db660">
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"http:\/\/www.simplecodestuffs.com\/angularjs-interacting-with-java-servlet-using-json\/":11388};
+		window.WPCOM_jetpack = true;
+				window.WPCOM_site_ID = 56132131;
+			</script>
+			<script type="text/javascript">
+			  (function() {
+			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			    po.src = 'https://apis.google.com/js/plusone.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+					<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+		<div id="fb-root"></div><script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=249643311490&version=v2.3'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script><script type="text/javascript">
+			jQuery( document ).ready( function() {
+			    jQuery.getScript( '//platform.linkedin.com/in.js?async=true', function success() {
+			        IN.init();
+			    });
+			});
+			jQuery( document.body ).on( 'post-load', function() {
+				if ( typeof IN != 'undefined' )
+					IN.parse();
+			});
+			</script>		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+		<!-- Inline jetpack_facebook_likebox -->
+<style id="jetpack_facebook_likebox-inline-css" type="text/css">
+.widget_facebook_likebox {
+	overflow: hidden;
+}
+
+</style>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/core.min.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/datepicker.min.js.download"></script><iframe name="oauth2relay611555099" id="oauth2relay611555099" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/prettify.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/launch.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/jquery.easing.1.3.js.download"></script><iframe style="display: none;" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/saved_resource(4).html"></iframe>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/comment-reply.min.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/photon.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/jquery.form.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.simplecodestuffs.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/scripts.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/devicepx-jetpack.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/jquery.fitvids.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/jquery.flexslider-min.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/et_flexslider.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/jquery.fancybox-1.3.4.pack.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/et-ptemplates-frontend.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/sharing.js.download"></script>
+<script type="text/javascript" src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/e-201645.js.download" async="" defer=""></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.6.1',blog:'56132131',post:'11388',tz:'0',srv:'www.simplecodestuffs.com'} ]);
+	_stq.push([ 'clickTrackerInit', '56132131', '11388' ]);
+</script>
+
+
+
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Database Caching 2/58 queries in 0.213 seconds using disk
+Object Caching 3134/3224 objects using disk
+Content Delivery Network via N/A
+
+ Served from: www.simplecodestuffs.com @ 2016-11-09 04:34:29 by W3 Total Cache --><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><img src="./AngularJS Interacting with Java Servlet using JSON_SimpleCodeStuffs_files/g.gif" alt=":)" width="6" height="5" id="wpstats"></body></html>

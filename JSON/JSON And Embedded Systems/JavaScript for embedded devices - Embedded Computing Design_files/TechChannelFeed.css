@@ -1,0 +1,23 @@
+ul.TechChannelFeed li time, ul.TechChannelFeed li span.time_delim { 
+	font-size:12px;
+}
+
+ul.TechChannelFeed li, ul.TechChannelFeed  li a { 
+	font-size: 14px;
+	line-height: 1.5em;
+}
+
+ul.TechChannelFeed.small li, ul.TechChannelFeed.small li a { 
+	font-size: 14px;
+	line-height: 1.3em;
+}
+
+ul.TechChannelFeed li.article a { 
+	/*font-size: larger;*/
+	font-weight: bolder;
+}
+
+ul.TechChannelFeed li.video a { 
+	font-size: smaller;
+}
+

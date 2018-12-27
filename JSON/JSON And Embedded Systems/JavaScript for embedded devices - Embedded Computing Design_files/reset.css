@@ -1,0 +1,15 @@
+* {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+html,body {height:100%}
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,a,img,blockquote,q,fieldset,input,textarea,hr {margin:0;padding:0;outline:none;border:0;list-style:none;quotes:none;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+q:before,q:after,blockquote:before,blockquote:after {content:""}
+body,h1,h2,h3,h4,h5,h6,pre,code,address,blockquote,caption,cite,code,em,strong,th,textarea,input {font-weight:400;font-style:normal;font-size:1em}
+h1,h2,h3,h4,h5,h6,strong {font-weight:700}
+img {border:0;vertical-align:bottom;-ms-interpolation-mode:bicubic}
+input,select,textarea {vertical-align:middle}
+input[type=submit],input[type=reset],input[type=button] {cursor:pointer}
+input::-moz-focus-inner {padding:0;border:0}
+table {border-collapse:collapse;border-spacing:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block}
+audio,canvas,video {display:inline-block;*display:inline;*zoom:1}
+
+.container {margin:0 auto}

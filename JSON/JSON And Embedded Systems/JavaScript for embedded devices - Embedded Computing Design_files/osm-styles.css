@@ -1,0 +1,44 @@
+
+.confidential { background-color: black; color: black; }
+article p.code-paragraph,
+article p.codeparagraph,
+article p.code {
+font-family:"Courier New", Courier, monospace;
+font-size:12px;
+color:#033;
+margin:0;
+padding:0 15px;
+/*white-space:nowrap;*/
+}
+article p.reference-heading{
+text-transform:uppercase;
+color:#222120;
+margin-bottom:5px;
+font:normal 700 14px/1.5em 'Droid Sans', Arial
+}
+span.footnote-reference {
+font-weight: bold;
+font-size: 80%;
+margin: -4px 0px;
+display: inline-block;
+vertical-align: top;
+margin-left: 1px;
+}
+p.footnote span.footnote-reference {
+font-weight: bold;
+font-size: 130%;
+margin: 4px;
+display: inline;
+}
+article p.reference-heading + ol{
+padding:15px
+}
+article li.references-list,
+article p.references-list {
+margin:3px 0px 10px 12px;
+font-size: 10px;
+color: #4E4C4B;
+background-color: #F2F3F4;
+padding: 3px 4px;
+text-align: left;
+}

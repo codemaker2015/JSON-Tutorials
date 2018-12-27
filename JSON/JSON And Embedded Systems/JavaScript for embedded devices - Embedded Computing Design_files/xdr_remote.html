@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- saved from url=(0150)http://me.opensystemsmedia.com/xdr_remote.php?_ga=1.77238101.1121185697.1485520779&xdm_e=http%3A%2F%2Fembedded-computing.com&xdm_c=default5670&xdm_p=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>easyXDM</title>
+        <script async="" src="./analytics.js.download"></script><script type="text/javascript" src="./easyXDM.min.js.download">
+        </script>
+        <script type="text/javascript">
+        
+        	var win, remoteapp, proxy, uuid, swfstoreload, swfstorewait, cookie_check;
+	       
+			function getCookie(c_name) {
+				var i,x,y,ARRcookies=document.cookie.split(";");
+				for (i=0;i<ARRcookies.length;i++) {
+					x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+					y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+					x=x.replace(/^\s+|\s+$/g,"");
+					if (x==c_name) {
+						return unescape(y);
+					}
+				}
+			}
+			
+			function setCookie(c_name,value,exdays) {
+				var exdate=new Date();
+				exdate.setDate(exdate.getDate() + exdays);
+				var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+				document.cookie=c_name + "=" + c_value;
+			}	
+	       
+			(function() {
+		    	proxy = new easyXDM.Rpc(
+		    		{
+						local: "/connect.php?action=xdr",
+						swf: "/share/JS/easyxdm.swf"
+					}, 
+					{
+						local: {
+                  	my_function_1: function(name) {
+	                  	sendData(
+	                  		{
+										
+									}
+								);
+	                  },
+	                  my_function_2: function(name){
+                        //remoteapp = null;
+								sendData(
+									{
+										
+									}
+								);
+                    	},
+						  	postMessage: function(data){
+                    		for (var key in data) {
+			            		if (data.hasOwnProperty(key)) {
+			                    switch(data[key]) {
+			                   		default:
+			                   			break;
+			                   	}
+									}
+								}
+                    }
+                },
+                remote: {
+                    postMessage: {}
+                }
+            }
+			);
+		})();
+	        
+		setCookie('CHK', 'Good', 1);
+		cookie_check = getCookie('CHK');
+		
+		if(cookie_check=='Good'){
+			
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			
+			ga('create', 'UA-91807-34', 'auto', {'allowLinker': true} );
+			//ga(
+			//	'send', 
+			//	'pageview' , 
+			//	{  
+			//		'hitCallback': function() { 
+			//			sendData({message:'ok'});
+			//		}
+			//	} 
+			//); 
+			ga(
+				function() { 
+						sendData({message:'ok'});
+				}
+			); 
+		
+		} else {
+			sendData({message:'no_third_party_cookies'});
+		}
+		
+		 function setApp(app){
+		    remoteapp = app;
+		}
+		
+		 function sendData(data){
+		    var copy = {};
+		    // copy the object in order to avoid the JSON serialization bug
+		    easyXDM.apply(copy, data);
+		    proxy.postMessage(copy);
+		}
+            		
+					sendData(
+				{
+					message:'munchkin', 
+					hash:false
+				}
+			);
+				</script>
+    </head>
+    <body>
+    
+</body></html>
